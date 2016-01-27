@@ -12,7 +12,7 @@ app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-app.set('port', 3000);
+app.set('port', process.env.PORT || 3000);
 
 // Load routes
 require('./app/routes/routes')(app);
