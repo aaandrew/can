@@ -1,3 +1,8 @@
 body{
 	text-align: center;
+	background-image: url("http://wallpapercanyon.com/wp-content/uploads/2016/01/Background-Images-1.jpg");
+}
+
+a:link{
+	text-decoration: none;
 }

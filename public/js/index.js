@@ -1,4 +1,4 @@
-function intializedPage{
+function intializedPage(){
 $("#submitBtn").click(updateProject);
 }
 
