@@ -39,9 +39,9 @@ a:link{
 }
  
  
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 50px) {
   .nav li {
-    width: 120px;
+    width: 110px;
     border-bottom: none;
     height: 50px;
     line-height: 50px;
