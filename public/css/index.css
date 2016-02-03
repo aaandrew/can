@@ -1,8 +1,55 @@
 body{
 	text-align: center;
-	background-image: url("http://wallpapercanyon.com/wp-content/uploads/2016/01/Background-Images-1.jpg");
+	background-image: url("http://static.vecteezy.com/system/resources/previews/000/094/506/original/abstract-light-blue-wave-vector.jpg");
 }
 
 a:link{
 	text-decoration: none;
+
 }
+ 
+.nav ul {
+  list-style: none;
+  background-color: #666666;
+  text-align: center;
+  font-size: 1.0em;
+  padding: 0;
+  margin: 0;
+}
+.nav li {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  font-size: 1.0em;
+  line-height: 60px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+ 
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  font-size: 0.9em;
+  padding: 0px 8px;
+  transition: .3s background-color;
+}
+ 
+.nav a:hover {
+  background-color: #0DAFDD;
+}
+ 
+ 
+@media screen and (min-width: 600px) {
+  .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+ 
+  /* Option 1 - Display Inline */
+  .nav li {
+    display: inline-block;
+    margin-right: 0px;
+  }
