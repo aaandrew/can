@@ -22,4 +22,12 @@ module.exports = function (app) {
 	app.get('/contactus', function(req,res){
 		res.render('contactus');
 	});
+
+	app.get('/student', function(req, res){
+		res.render('student');
+	});
+
+	app.get('/done', function(req, res){
+		res.render('done');
+	});
 }
