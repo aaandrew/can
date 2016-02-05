@@ -1,6 +1,5 @@
 body{
-	text-align: center;
-	background-image: url("http://static.vecteezy.com/system/resources/previews/000/094/506/original/abstract-light-blue-wave-vector.jpg");
+  background-color: #F1F1F1;
 }
 
 a:link{
@@ -55,4 +54,74 @@ a:link{
     display: inline-block;
     margin-right: 0px;
   }
-  
+
+
+/********************************
+ browse.handlebars
+ ********************************/
+
+.browse-background {
+  height: inherit;
+  width: inherit;
+  z-index: -5;
+}
+
+.navbar {
+  height: 65px;
+  background-color: white;
+}
+
+.browse-container {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.browse-college-item {
+  display: block;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 145px;
+  width: 380px;
+  background-color: white;
+}
+
+.browse-college-img {
+  float: left;
+  height: inherit;
+  width: 145px;
+}
+
+.browse-college-img > img{
+  width: 100%;
+  height: 100%;
+}
+
+.browse-college-info {
+  float: left;
+  height: inherit; 
+  margin-left: 15px;
+  margin-top: 5px;
+  text-align: left;
+  font-weight: 200;
+}
+
+.browse-college-name{
+  color: #4A90E2;
+  font-size: 24px;
+}
+
+.browse-college-location {
+  color: #4A4A4A;
+  font-size: 14px;
+}
+
+.browse-college-text {
+  margin-top: 3px;
+  font-size: 12px;
+  line-height: 25px;
+}
+
+.browse-college-text > span {
+  margin-left: 7px;
+}
