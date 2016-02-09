@@ -30,4 +30,17 @@ module.exports = function (app) {
 	app.get('/done', function(req, res){
 		res.render('done');
 	});
+
+	app.get('/stanford', function(req, res){
+		res.render('stanford');
+	});
+
+	app.get('/harvard', function(req, res){
+		res.render('harvard');
+	});
+
+	app.get('/appointments', function(req,res){
+		res.render('appointments');
+
+	});
 }

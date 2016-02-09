@@ -26,6 +26,14 @@ var faq = require('./app/routes/faq');
 app.get('./views/faq', faq.view);
 var contactus = require('./app/routes/contactus');
 app.get('.views/contactus', contactus.view);
+var stanford = require('./app/routes/stanford');
+app.get('./views/stanford', stanford.view);
+var harvard = require('./app/routes/harvard');
+app.get('./views/harvard', harvard.view);
+var appointments = require('./app/routes/appointments');
+app.get('./views/appointments', appointments.view);
+
+
 
 app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
