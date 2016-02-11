@@ -1,26 +1,6 @@
-<div class="nav">
-          <ul>
-          <div class="container">     
-            <div class="row">
-                <div class="col-xs-4 col-md-4">
-            <li class="myprofile"><a href="#">Profile</a></li>
-                </div>
-                <div class="col-xs-4 col-md-4">
-            <li class="myschools"><a href="#">My Schools</a></li>
-                </div>
-                <div class="col-xs-4 col-md-4">
-            <li class="myappointments"><a href="#">Appointments</a></li>
-                </div>
-            </div>
-        </div>
-          </ul>
-        </div>
-    </header>
-<a href="/" class="myButton">Pierre</a></div>
 <div class="browse-background">
-  <div class="navbar"></div>
   <div class="browse-container">
-
+<!--
     <div class="browse-college-item">
       <div class="browse-college-img">
         <img src="images/ucsd.jpg" />
@@ -74,45 +54,25 @@
         <section>
       </div>
     </div>
-
-
+-->
+{{#each browsecollege}}
     <div class="browse-college-item">
       <div class="browse-college-img">
-        <img src="images/ucsd.jpg" />
+        <img src="{{image}}" />
       </div>
       <div class="browse-college-info">
-        <span class="browse-college-name">UC San Diego</span><br/>
-        <span class="browse-college-location">La Jolla, CA</span><br/>
+        <span class="browse-college-name">{{collegename}}</span><br/>
+        <span class="browse-college-location">{{city}}</span><br/>
         <section class="browse-college-text">
           <div class="glyphicon glyphicon-th"></div>
-          <span>23 representatives</span><br/>
+          <span>{{representatives}}</span><br/>
           <div class="glyphicon glyphicon-th"></div>
-          <span>24,000 undergrads</span><br/>
+          <span>{{grads}}</span><br/>
           <div class="glyphicon glyphicon-th"></div>
-          <span>33% acceptance</span>
+          <span>{{acceptance}}</span>
         <section>
       </div>
     </div>
-
+{{/each}}
   </div>
 </div>
-
-<footer>
-    <div class="nav">
-            <ul>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-4 col-md-4">
-                            <p> <a href="./about"> About Us </a></p>
-                        </div>      
-                        <div class="col-xs-4 col-md-4">
-                            <p> <a href="./faq">FAQ </a></p>
-                        </div>
-                        <div class="col-xs-4 col-md-4">
-                            <p> <a href="./contactus"> Contact Us </a></p>
-                        </div>
-                    </div>
-                </div>
-            </ul>        
-    </div>
-</footer>

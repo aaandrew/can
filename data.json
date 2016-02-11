@@ -1,0 +1,152 @@
+{
+		"links":[
+			{
+				"ucsd": "./ucsd",
+				"stanford": "./stanford",
+				"harvard": "./harvard",
+				"browse": "./browse",
+				"appointments": "./appointments"
+			}
+			],
+
+		"footer": [
+			{
+			"href": "./about",
+			"labels": "About"
+			},
+			{
+			"href": "./faq",
+			"labels": "FAQ"
+			},
+			{
+			"href": "./contactus",
+			"labels": "Contact Us"
+			}
+		],
+
+
+		"ucsdstudents":[
+			{
+				"name": "Sally Yu",
+				"href": "/student",
+				"year": "3rd Year",
+				"major": "Major: Psychology",
+				"college": "College: Revelle College",
+				"fraternity": "Greek Sorority: Delta Gamma",
+				"extracurriculars": "Extracurriculars: Tennis, Undergraduate Researcher",
+				"housing":" Lives: On-Campus Apartments",
+				"image": "http://cdn.shopify.com/s/files/1/0213/2686/products/TO_HashtagTriton_01_grande.jpg?v=1397167998"
+			},
+			{
+				"name": "Dave Young",
+				"href":"/student",
+				"year": "2nd Year",
+				"major": "Major: Biology",
+			  "college" : "College: Sixth College",
+				"fraternity": "Greek Fraternity: Pi Kappa Alpha",
+				"extracurriculars": "Extracurriculars: Ultimate Frisbee",
+				"housing": "Lives: Off-Campus Apartments",
+				"image": "http://cdn.shopify.com/s/files/1/0213/2686/products/TO_SpiritSweater_grande.jpg?v=1366404617"
+			},
+			{
+				"name": "Andrew Walker",
+				"href": "/student",
+				"year": "4th Year",
+				"major": "Major: Computer Science",
+			  "college" : "College: Muir College",
+				"fraternity": "Professional Fraternity: Theta Tau",
+				"extracurriculars": "Extracurriculars: Basketball",
+				"housing": "Lives: On-Campus Apartments",
+				"image": "http://cdn.shopify.com/s/files/1/0213/2686/products/TO_HashtagTriton_01_b8b17631-824c-494f-820a-47f568557fb8_grande.jpg?v=1402964645"
+			}
+	],
+
+			"stanford":[
+				{
+					"name": "Meagan Rosen",
+					"href": "/student",
+					"year": "2nd Year",
+					"major": "Major: Communications",
+					"extracurriculars": "Extracurriculars: Tennis",
+					"housing": "Lives: On-Campus Apartments",
+					"image": "http://cdn.shopify.com/s/files/1/0061/6462/products/STF977WV_1024x1024.jpg?v=1354125474"
+				},
+				{
+					"name": "Brandon Dye",
+					"href": "/student",
+					"year": "3rd Year",
+					"major": "Major: Chemical Engineering",
+					"extracurriculars": "Extracurriculars: Basketball",
+					"housing": "Lives: Off-Campus Apartments",
+					"image": "https://c3.staticflickr.com/7/6180/6176530185_eccd397044.jpg"
+				},
+				{
+					"name": "Gabriel Castro",
+					"href": "/student",
+					"year": "4th Year",
+					"major": "Major: Physics",
+					"extracurriculars": "Extracurriculars: Undergraduate Researcher, Football",
+					"housing": "Lives: On-Campus Apartments",
+					"image": "https://s-media-cache-ak0.pinimg.com/564x/2b/66/7a/2b667a95b8097f673d5a664cc057dd2a.jpg"
+			}
+		],
+		"harvard":[
+		{
+			"name": "Michelle Soto",
+			"href": "/student",
+			"year": "3nd Year",
+			"major": "Major: History and Literature",
+			"fraternity": "Greek Sorority: Kappa Alpha Theta",
+			"extracurriculars": "Extracurriculars: Sailing",
+			"housing": "Lives: On-Campus Apartments",
+			"image": "http://cdn.shopify.com/s/files/1/0084/9282/products/Law_School-Gray-W_copy.jpg?v=1404850793"
+		},
+		{
+			"name": "Rose Meyers",
+			"href": "/student",
+			"year": "4th Year",
+			"major": "Major: Music",
+			"fraternity": "Greek Sorority: Delta Gamma",
+			"extracurriculars": "Extracurriculars: Fencing, Cycling",
+			"housing": "Lives: Off-Campus Apartments",
+			"image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ4Rk3ZKmcNMkTpeJAqIG1d7gvW_dTJCITUflDtKcPPzlgOS78nWQ"
+		},
+		{
+			"name": "Gabriel Castro",
+			"href": "/student",
+			"year": "3rd Year",
+			"major": "Major: Biochemistry",
+			"fraternity": "Greek Fraternity: Sigma Chi",
+			"extracurriculars": "Extracurriculars: Archery, Badminton",
+			"housing": "Lives: On-Campus Apartments",
+			"image": "http://cdn.shopify.com/s/files/1/0084/9282/products/Harvard_Medical_School_T-Shirt_-M_large.jpg?v=1404999567"
+		}
+	],
+
+	"browsecollege":[
+		{
+			"collegename": "University of California, San Diego",
+			"city": "La Jolla,CA",
+			"representatives": "3 representatives",
+			"grads": "24,000 undergraduates",
+			"acceptance": "33% acceptance",
+			"image": "images/ucsd.jpg"
+		},
+		{
+			"collegename": "Stanford",
+			"city": "Stanford, CA",
+			"representatives": "3 representatives",
+			"grads": "6,980 undergraduates",
+			"acceptance": "5.04% acceptance",
+			"image":"https://res.cloudinary.com/crowdpac/image/upload/c_fill,g_face,h_420,w_470/v1/Universities/Stanford-University"
+		},
+		{
+		"collegename": "Harvard University",
+		"city": "Cambridge, Massachusetts",
+		"representatives": "3 representatives",
+		"grads": "6,700 undergraduates",
+		"acceptance": "5.3% acceptance",
+		"image": "http://campusvisitexperts.cetours.com/wp-content/uploads/2015/03/NE-tour1.jpg"
+		}
+	]
+}

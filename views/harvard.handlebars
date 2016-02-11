@@ -1,94 +1,23 @@
-<body>
-<header>
-<div class="nav">
-          <ul>
-          <div class="container">     
-            <div class="row">
-                <div class="col-xs-4 col-md-4">
-            <li class="myprofile"><a href="#">Profile</a></li>
-                </div>
-                <div class="col-xs-4 col-md-4">
-            <li class="myschools"><a href="#">My Schools</a></li>
-                </div>
-                <div class="col-xs-4 col-md-4">
-            <li class="myappointments"><a href="#">Appointments</a></li>
-                </div>
-            </div>
-        </div>
-          </ul>
-        </div>
-    </header>
-
-<a href="/" class="myButton">Pierre</a></div>
-<div class="schoollogo"> 
+</br>
+<div class="schoollogo">
 	<img src="http://news.harvard.edu/gazette/wp-content/themes/gazette20/a/i/harvard-logo-2x.png" alt="" height="75%" width="75%"> </div>
 <h3> Click on a student if you want to ask them a question!</h3>
 
+{{#each harvard}}
 	<div class="student">
 		<div id="stuPicture">
-			<img src="http://cdn.shopify.com/s/files/1/0084/9282/products/Law_School-Gray-W_copy.jpg?v=1404850793" alt=""width="100px">
+			<img src="{{image}}" alt=""width="100px">
 		</div>
-		
+
 		<div class="studentname">
-			<a href="/student"> Michelle Soto </a>
+			<a href={{href}}>{{name}}</a>
 		</div>
 		<ul>
-			<li> 2nd Year </li>
-			<li> Major: History and Literature </li>
-			<li> Greek Sorority: Kappa Alpha Theta </li>
-			<li> Extracurriculars: Sailing </li>
-			<li> Lives: On-Campus Apartments </li>
+			<li>{{year}}</li>
+			<li>{{major}}</li>
+			<li>{{fraternity}}</li>
+			<li>{{extracurriculars}}</li>
+			<li>{{housing}}</li>
 		</ul>
 	</div>
-
-	<div class="student">
-		<div id="stuPicture">
-			<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ4Rk3ZKmcNMkTpeJAqIG1d7gvW_dTJCITUflDtKcPPzlgOS78nWQ" alt=""width="100px">
-		</div>
-		<div class="studentname">
-			<a href="#"> Rose Meyers</a>
-		</div>
-		<ul>
-			<li> 4th Year </li>
-			<li> Major: Music</li>
-			<li> Extracurriculars: Fencing, Cycling</li>
-			<li> Lives: Off-Campus Apartments </li>
-		</ul>
-	</div>
-
-	<div class="student">
-		<div id="stuPicture">
-			<img src="http://cdn.shopify.com/s/files/1/0084/9282/products/Harvard_Medical_School_T-Shirt_-M_large.jpg?v=1404999567" alt=""width="100px">
-		</div>
-		<div class="studentname">
-			<a href="#"> Gabriel Castro</a>
-		</div>
-		<ul>
-			<li> 3rd Year </li>
-			<li> Major: Biochemistry </li>
-			<li> Extracurriculars: Archery, Badminton </li>
-			<li> Lives: On-Campus Apartments </li>
-		</ul>
-	</div>
-
-<footer>
-    <div class="nav">
-            <ul>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-4 col-md-4">
-                            <p> <a href="./about"> About Us </a></p>
-                        </div>      
-                        <div class="col-xs-4 col-md-4">
-                            <p> <a href="./faq">FAQ </a></p>
-                        </div>
-                        <div class="col-xs-4 col-md-4">
-                            <p> <a href="./contactus"> Contact Us </a></p>
-                        </div>
-                    </div>
-                </div>
-            </ul>        
-    </div>
-</footer>
-
-</body>
+{{/each}}

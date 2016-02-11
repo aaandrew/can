@@ -6,7 +6,7 @@ a:link{
 	text-decoration: none;
 
 }
- 
+
 .nav ul {
   list-style: none;
   background-color: #666666;
@@ -26,7 +26,7 @@ a:link{
   border-right:1px solid #888;
   border-bottom: 1px solid #888;
 }
- 
+
 .nav a {
   text-decoration: none;
   color: #fff;
@@ -34,12 +34,12 @@ a:link{
   font-size: 0.9em;
   transition: .3s background-color;
 }
- 
+
 .nav a:hover {
   background-color: #0DAFDD;
 }
- 
- 
+
+
 @media screen and (min-width: 50px) {
   .nav li {
     width: 100px;
@@ -48,7 +48,7 @@ a:link{
     line-height: 50px;
     font-size: 1.4em;
   }
- 
+
   /* Option 1 - Display Inline */
   .nav li {
     display: inline-block;
@@ -98,7 +98,7 @@ a:link{
 
 .browse-college-info {
   float: left;
-  height: inherit; 
+  height: inherit;
   margin-left: 15px;
   margin-top: 5px;
   text-align: left;
@@ -124,7 +124,7 @@ a:link{
 .browse-college-text > span {
   margin-left: 7px;
 }
-  
+
 
 .student{
   width: 290px;
@@ -205,4 +205,19 @@ p.aboutus{
 
 td.avaliable{
   background-color: #33ccff;
+}
+
+td.avaliabilitybox{
+  background-color: #33ccff;
+  height:20px;
+  width:20px;
+  border:solid 1px;
+}
+
+#searchbar{
+  margin-top: 15px;
+}
+
+.schoollogo{
+  margin: 20px;
 }

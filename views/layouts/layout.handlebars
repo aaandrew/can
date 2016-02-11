@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html>
   <head>
-   <title>Pierre</title>	
+   <title>Pierre</title>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css"> 
+    <link rel="stylesheet" href="css/index.css">
   </head>
+
+  <div class="nav">
+            <ul>
+            <div class="container">
+              <div class="row">
+                  <div class="col-xs-4 col-md-4">
+              <li class="myprofile"><a href="/">PIERRE!</a></li>
+                  </div>
+                  <div class="col-xs-4 col-md-4">
+                    <section>
+                      <input type="text" id="searchbar" placeholder="Search colleges" size="10">
+                        <a href="./browse"><span class="glyphicon glyphicon-search"</a>
+                    </section>
+                  </div>
+                  <div class="col-xs-4 col-md-4">
+                    <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown"> More
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="./appointments">Appointments</a></li>
+                          <li><a href="./studentbio">Page 1</a></li>
+                          <li><a href="#">Page 1</a></li>
+                        </ul>
+                    </li>
+                  </div>
+              </div>
+            </div>
+            </ul>
+  </div>
+
   <body>
     {{{body}}}
+    {{#each footer}}
+    <footer>
+        <div class="nav">
+                <ul>
+                  <a href={{href}}> {{labels}}</a>
+                </ul>
+        </div>
+    </footer>
+    {{/each}}
+    </section>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

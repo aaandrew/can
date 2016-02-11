@@ -18,6 +18,7 @@ app.set('port', process.env.PORT || 3000);
 
 // Load routes
 require('./app/routes/routes')(app);
+/*
 var ucsd = require('./app/routes/ucsd');
 app.get('./views/ucsd', ucsd.view);
 var about = require('./app/routes/about');
@@ -33,6 +34,12 @@ app.get('./views/harvard', harvard.view);
 var appointments = require('./app/routes/appointments');
 app.get('./views/appointments', appointments.view);
 
+*/
+
+var json = require('./data.json');
+app.get('/', function(req,res){
+	res.json(json);
+});
 
 
 app.listen(app.get('port'), function() {
