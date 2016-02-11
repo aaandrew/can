@@ -1,6 +1,6 @@
-<div class="browse-background">
+<!--<div class="browse-background">
   <div class="browse-container">
-<!--
+
     <div class="browse-college-item">
       <div class="browse-college-img">
         <img src="images/ucsd.jpg" />
@@ -55,11 +55,16 @@
       </div>
     </div>
 -->
+<h3> links for colleges is currently broken. </h3>
+<span class="browse-college-name"><a href="./ucsd">UCSD</a></span><br/>
+<span class="browse-college-name"><a href="./stanford">Stanford</a></span><br/>
+<span class="browse-college-name"><a href="./harvard">Harvard</a></span><br/>
 {{#each browsecollege}}
-    <div class="browse-college-item">
-      <div class="browse-college-img">
-        <img src="{{image}}" />
-      </div>
+  <!--  <div class="browse-college-item">
+      <div class="browse-college-img"> -->
+      <div class = "browse-college-item">
+        <img src="{{image}}" width="50%" height="50%">
+    <!--  </div> -->
       <div class="browse-college-info">
         <span class="browse-college-name">{{collegename}}</span><br/>
         <span class="browse-college-location">{{city}}</span><br/>
@@ -73,6 +78,7 @@
         <section>
       </div>
     </div>
+
 {{/each}}
   </div>
 </div>

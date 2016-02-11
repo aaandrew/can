@@ -57,7 +57,7 @@ a:link{
 
 /********************************
  browse.handlebars
- ********************************/
+ ********************************
 
 .browse-background {
   height: inherit;
@@ -74,7 +74,7 @@ a:link{
   margin-left: 50px;
   margin-right: 50px;
 }
-
+*/
 .browse-college-item {
   display: block;
   margin-bottom: 30px;
@@ -90,14 +90,14 @@ a:link{
   height: inherit;
   width: 145px;
 }
-
+/*
 .browse-college-img > img{
   width: 100%;
   height: 100%;
 }
-
+*/
 .browse-college-info {
-  float: left;
+  /*float: left; */
   height: inherit;
   margin-left: 15px;
   margin-top: 5px;
@@ -107,7 +107,7 @@ a:link{
 
 .browse-college-name{
   color: #4A90E2;
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .browse-college-location {
@@ -126,7 +126,10 @@ a:link{
 }
 
 
-.student{
+.browse-college-item{
+  background-color: white;
+}
+.student, .browse-college-item{
   width: 290px;
   height: auto;
   border: solid 1px ;
