@@ -11,7 +11,7 @@ a:link{
   list-style: none;
   background-color: #666666;
   text-align: center;
-  font-size: 0.8em;
+  font-size: 0.7em;
   padding: 0px;
   margin: 0;
 }
@@ -21,10 +21,6 @@ a:link{
   font-size: 1.0em;
   line-height: 60px;
   height: 40px;
-  border-top:1px solid #888;
-  border-left: 1px solid #888;
-  border-right:1px solid #888;
-  border-bottom: 1px solid #888;
 }
 
 .nav a {
