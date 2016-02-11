@@ -1,84 +1,25 @@
-<!--<div class="browse-background">
+<div class="browse-background">
   <div class="browse-container">
 
+    {{#each browse}}
     <div class="browse-college-item">
       <div class="browse-college-img">
-        <img src="images/ucsd.jpg" />
+        <img src="{{image}}" />
       </div>
       <div class="browse-college-info">
-        <span class="browse-college-name"><a href="/ucsd">UC San Diego</a></span><br/>
-        <span class="browse-college-location">La Jolla, CA</span><br/>
-        <section class="browse-college-text">
-          <div class="glyphicon glyphicon-th"></div>
-          <span>23 representatives</span><br/>
-          <div class="glyphicon glyphicon-th"></div>
-          <span>24,000 undergrads</span><br/>
-          <div class="glyphicon glyphicon-th"></div>
-          <span>33% acceptance</span>
-        <section>
-      </div>
-    </div>
-
-        <div class="browse-college-item">
-      <div class="browse-college-img">
-        <img src="https://res.cloudinary.com/crowdpac/image/upload/c_fill,g_face,h_420,w_470/v1/Universities/Stanford-University" />
-      </div>
-      <div class="browse-college-info">
-        <span class="browse-college-name"><a href="/stanford">Stanford</a></span><br/>
-        <span class="browse-college-location">Stanford, CA</span><br/>
-        <section class="browse-college-text">
-          <div class="glyphicon glyphicon-th"></div>
-          <span>23 representatives</span><br/>
-          <div class="glyphicon glyphicon-th"></div>
-          <span>6,980 undergrads</span><br/>
-          <div class="glyphicon glyphicon-th"></div>
-          <span>5.04% acceptance</span>
-        <section>
-      </div>
-    </div>
-
-    <div class="browse-college-item">
-      <div class="browse-college-img">
-        <img src="http://campusvisitexperts.cetours.com/wp-content/uploads/2015/03/NE-tour1.jpg" />
-      </div>
-      <div class="browse-college-info">
-        <span class="browse-college-name"><a href="/harvard">Harvard</a></span><br/>
-        <span class="browse-college-location">Cambridge, Massachusetts</span><br/>
-        <section class="browse-college-text">
-          <div class="glyphicon glyphicon-th"></div>
-          <span>23 representatives</span><br/>
-          <div class="glyphicon glyphicon-th"></div>
-          <span>6,700 undergrads</span><br/>
-          <div class="glyphicon glyphicon-th"></div>
-          <span>5.3% acceptance</span>
-        <section>
-      </div>
-    </div>
--->
-<h3> links for colleges is currently broken. </h3>
-<span class="browse-college-name"><a href="./ucsd">UCSD</a></span><br/>
-<span class="browse-college-name"><a href="./stanford">Stanford</a></span><br/>
-<span class="browse-college-name"><a href="./harvard">Harvard</a></span><br/>
-{{#each browsecollege}}
-  <!--  <div class="browse-college-item">
-      <div class="browse-college-img"> -->
-      <div class = "browse-college-item">
-        <img src="{{image}}" width="50%" height="50%">
-    <!--  </div> -->
-      <div class="browse-college-info">
-        <span class="browse-college-name">{{collegename}}</span><br/>
-        <span class="browse-college-location">{{city}}</span><br/>
+        <span class="browse-college-name"><a href="{{link}}">{{name}}</a></span><br/>
+        <span class="browse-college-location">{{location}}</span><br/>
         <section class="browse-college-text">
           <div class="glyphicon glyphicon-th"></div>
           <span>{{representatives}}</span><br/>
           <div class="glyphicon glyphicon-th"></div>
-          <span>{{grads}}</span><br/>
+          <span>{{population}}</span><br/>
           <div class="glyphicon glyphicon-th"></div>
           <span>{{acceptance}}</span>
-        <section>
+        </section>
       </div>
     </div>
+    {{/each}}
 
-{{/each}}
   </div>
 </div>

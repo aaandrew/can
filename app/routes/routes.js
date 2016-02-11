@@ -1,4 +1,5 @@
 var data = require("../../data.json");
+var browseData = require("../data/browse.json");
 
 module.exports = function (app) {
 	app.get('/', function(req, res){
@@ -6,7 +7,7 @@ module.exports = function (app) {
 	});
 
 	app.get('/browse', function(req, res){
-		res.render('browse', data);
+		res.render('browse', browseData);
 	});
 
 	app.get('/ucsd', function(req,res){
