@@ -48,6 +48,11 @@ module.exports = function (app) {
 
 	app.get('/studentbio', function(req,res){
 		res.render('studentbio', data);
+	});
+
+
+	app.get('/login', function(req, res) {
+		res.render('login', data)
 
 	});
 }
