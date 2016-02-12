@@ -51,6 +51,21 @@ a:link{
     margin-right: 0px;
   }
 
+
+/********************************
+ index.handlebars
+ ********************************/
+
+.home-account-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.home-create-button {
+  margin-bottom: 10px;
+}
+
+
 /********************************
  browse.handlebars
  ********************************/
@@ -279,3 +294,21 @@ td.avaliabilitybox{
 .appointment-text > span > strong + span{
   margin-left: 2px;
 }
+
+/********************************
+ create_account_mentee.handlebars
+ ********************************/
+
+ .create-account-container {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.create-form-item {
+  margin-bottom: 20px;
+}
+
+ .create-form-bio {
+  height: 200px;
+  width: 400px;
+ }

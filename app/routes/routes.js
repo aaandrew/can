@@ -1,6 +1,7 @@
 var data = require("../../data.json");
 var browseData = require("../data/browse.json");
 var dashboardData = require("../data/dashboard_data.json");
+var studentData = require("../data/student.json");
 
 module.exports = function (app) {
 	app.get('/', function(req, res){
@@ -28,7 +29,7 @@ module.exports = function (app) {
 	});
 
 	app.get('/student', function(req, res){
-		res.render('student', data);
+		res.render('student', studentData);
 	});
 
 	app.get('/done', function(req, res){
@@ -60,4 +61,13 @@ module.exports = function (app) {
 	app.get('/dashboard', function(req, res){
 		res.render('dashboard', dashboardData);
 	});
+
+	app.get('/create_mentee', function(req, res){
+		res.render('create_account_mentee');
+	});
+
+	app.get('/create_mentor', function(req, res){
+		res.render('create_account_mentor');
+	});
+
 };
