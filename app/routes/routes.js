@@ -66,8 +66,20 @@ module.exports = function (app) {
 		res.render('create_account_mentee');
 	});
 
+	app.get('/create_mentee_login', function(req, res){
+		res.render('create_mentee_login');
+	});
+
 	app.get('/create_mentor', function(req, res){
 		res.render('create_account_mentor');
+	});
+
+	app.get('/create_mentor_login', function(req, res){
+		res.render('create_mentor_login');
+	});
+
+	app.get('/create_account_from_login', function(req, res){
+		res.render('create_account_from_login');
 	});
 
 };
