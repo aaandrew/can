@@ -11,15 +11,15 @@
 
 		"footer": [
 			{
-			"href": "./about",
+			"about": "./about",
 			"labels": "About"
 			},
 			{
-			"href": "./faq",
+			"faq": "./faq",
 			"labels": "FAQ"
 			},
 			{
-			"href": "./contactus",
+			"contactus": "./contactus",
 			"labels": "Contact Us"
 			}
 		],
