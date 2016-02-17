@@ -82,4 +82,9 @@ module.exports = function (app) {
 		res.render('create_account_from_login');
 	});
 
+
+	app.get('/index', function(req, res){
+		res.render('index');
+	});
+
 };
