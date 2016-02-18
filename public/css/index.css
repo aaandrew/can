@@ -23,6 +23,8 @@ a:link{
   height: 40px;
 }
 
+
+
 .nav a{
   text-decoration: none;
   color: #fff;
@@ -230,12 +232,13 @@ td.avaliabilitybox{
 
 #searchbar{
   margin-top: 15px;
+  width: 110px;
+  text-align: center;
 }
 
 .schoollogo{
   margin: 20px;
 }
-
 
 /********************************
  dashboard.handlebars
