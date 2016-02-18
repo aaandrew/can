@@ -7,10 +7,6 @@ a:link{
 
 }
 
-@-ms-viewport{
-  width: device-width;
-}
-
 .nav ul {
   list-style: none;
   background-color: #666666;
@@ -19,7 +15,7 @@ a:link{
   padding: 0px;
   margin: 0;
 }
-.nav li {
+.nav li{
   font-family: 'Arial', sans-serif;
   text-align: -4;
   font-size: 1.0em;
@@ -27,7 +23,7 @@ a:link{
   height: 40px;
 }
 
-.nav a {
+.nav a{
   text-decoration: none;
   color: #fff;
   display: block;
@@ -316,3 +312,77 @@ td.avaliabilitybox{
   height: 200px;
   width: 400px;
  }
+
+
+.title{
+  height:50px;
+  width:auto;
+  background-color: white;
+  padding-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.formh6{
+  color: #ED7F82;
+  font-weight: bold;
+}
+
+.roundbutton{
+    color: #FFFFFF;
+    background: #ED7F82;
+    border: 5px;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.footer{
+  color: white;
+  background: #ED7F82;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.homescreen{
+  background-color: #7B7273;
+  color: white;
+  text-align: center;
+}
+
+.home-words{
+  font-weight: bold;
+  font-size: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.homewords{
+  font-size:11px;
+  word-break: normal;
+  padding: 25px;
+}
+
+.banner3{
+  background-color: #F4F4F4;
+}
+
+.banner4{
+  background-color: white;
+  padding: 20px;
+  color:#AFAFB0;
+}
+
+.bannertitle{
+  font-weight: bold;
+}
+
+.bannerdescription{
+  color:#AFAFB0;
+  font-size: 11px;
+  padding: 10px;
+
+}
+
+.homeimage{
+  float:left;
+}

@@ -87,4 +87,11 @@ module.exports = function (app) {
 		res.render('index');
 	});
 
+	app.get('/editmenteeacc',function(req,res){
+		res.render('editmenteeacc');
+	});
+
+	app.get('/editmentoracc',function(req,res){
+		res.render('editmentoracc');
+	});
 };

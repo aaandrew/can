@@ -60,6 +60,30 @@
 				"image": "http://cdn.shopify.com/s/files/1/0213/2686/products/TO_HashtagTriton_01_b8b17631-824c-494f-820a-47f568557fb8_grande.jpg?v=1402964645"
 			}
 	],
+				"homepage":[
+					{
+						"banner": "Real Students, Honest Stories",
+						"banner2": "Understand different campus experiences from actual college students"
+					}
+				],
+
+				"help":[
+					{
+						"image":"http://image005.flaticon.com/1/svg/74/74472.svg",
+						"titlehelp": "YOU",
+						"describe": "Joe is a senior in high school that was accepted into some colleges but doesn't know which is best for him."
+					},
+					{
+						"image":"http://image005.flaticon.com/1/svg/33/33308.svg",
+						"titlehelp": "pierre",
+						"describe": "Pierre allows Joe to connect with mentors from different colleges so that he doesn't spend money traveling to all the colleges."
+					},
+					{
+						"image":"http://image005.flaticon.com/1/svg/68/68045.svg",
+						"titlehelp": "MENTOR",
+						"describe": "Sally shares her honest college experience, and tells cool stories along the way so that Joe is better informed to make his decision."
+					}
+				],
 
 			"stanford":[
 				{
