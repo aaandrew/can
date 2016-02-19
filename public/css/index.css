@@ -14,13 +14,14 @@ a:link{
   font-size: 0.7em;
   padding: 0px;
   margin: 0;
-}
+}/*
 .nav li{
   font-family: 'Arial', sans-serif;
-  text-align: -4;
-  font-size: 1.0em;
+  font-size: 1.2em;
+  height:20px;
+  line-height: 20px;
 }
-
+*/
 
 
 .nav a{
@@ -35,15 +36,16 @@ a:link{
 }
 
 
-@media screen and (min-width: 50px) {
+@media screen  {
   .nav li {
     width: 100px;
     border-bottom: none;
-    height: 50px;
+    height: 30px;
     line-height: 50px;
     font-size: 1.2em;
+    float:left;
   }
-
+}
 
 
 /********************************
