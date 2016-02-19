@@ -41,7 +41,7 @@ a:link{
     border-bottom: none;
     height: 50px;
     line-height: 50px;
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 
 
@@ -70,17 +70,22 @@ a:link{
   margin-right: auto;
   margin-left: auto;
   background-color: white;
-
 }
 
 
 .browse-college-info,.appointment-info{
 left: 135px;
-top:-120px;
-word-wrap: normal;
+top:-130px;
+width:180px;
+word-wrap: break-word;;
 position:relative;
 }
 
+
+.appointment-info{
+  font-size: 1.0em;
+
+}
 /*
 .browse-college-item{
   background-color: white;
@@ -239,16 +244,6 @@ p.aboutus{
   top:1px;
 }
 
-td.avaliable{
-  background-color: #33ccff;
-}
-
-td.avaliabilitybox{
-  background-color: #33ccff;
-  height:20px;
-  width:20px;
-  border:solid 1px;
-}
 
 #searchbar{
   margin-top: 15px;
@@ -346,6 +341,16 @@ td.avaliabilitybox{
   font-weight: bold;
 }
 
+.pagecolor{
+  color:#ED7F82;
+}
+
+.studentbio{
+  background-color: #F4F4F4;
+}
+.appointment-bg, .stu-name{
+  background-color: white;
+}
 .formh6{
   color: #ED7F82;
   font-weight: bold;
@@ -359,6 +364,33 @@ td.avaliabilitybox{
     padding: 10px;
 }
 
+.roundbutton2{
+    color: #FFFFFF;
+    background: #ED7F82;
+    border: 5px;
+    border-radius: 25px;
+    padding: 10px;
+    border: 2px solid;
+    font-size: 10px;
+}
+.notavalibutton{
+    background-color: #FFFFFF;
+    color: #808080;
+    border: 5px;
+    border-radius: 25px;
+    padding: 10px;
+    border: 2px solid;
+    font-size: 10px;
+}
+.avalibutton{
+    color: #ED7F82;
+    background: #FFFFFF;
+    border: 5px;
+    border-radius: 25px;
+    padding: 10px;
+    border: 2px solid;
+    font-size: 10px;
+}
 .footer{
   color: white;
   background: #ED7F82;
@@ -387,6 +419,7 @@ td.avaliabilitybox{
 
 .banner3{
   background-color: #F4F4F4;
+  height:100px;
 }
 
 .banner4{
@@ -395,17 +428,31 @@ td.avaliabilitybox{
   color:#777777;
 }
 
-.bannertitle, p.banner{
+.bannertitle, p.banner, .stu-title{
   font-weight: bold;
 }
 
+.stu-info, .confirmtext{
+  position: relative;
+  padding-bottom:5px;
+  width:200px;
+}
 .bannerdescription{
   color:#818181;
   font-size: 11px;
-  padding: 10px;
-
+  position: relative;
+  left: 90px;
+  bottom:80px;
+  text-align: left;
+  width: 250px;
 }
 
+.bannertitle{
+  left:90px;
+  bottom:60px;
+  position: relative;
+}
 .homeimage{
-  float:left;
+  position: relative;
+  left: 25px;
 }
