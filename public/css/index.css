@@ -84,8 +84,8 @@ position:relative;
 
 .appointment-info{
   font-size: 1.0em;
-
 }
+
 /*
 .browse-college-item{
   background-color: white;
@@ -351,7 +351,7 @@ p.aboutus{
 .appointment-bg, .stu-name{
   background-color: white;
 }
-.formh6{
+.formh6, .create-form-item{
   color: #ED7F82;
   font-weight: bold;
 }
@@ -455,4 +455,11 @@ p.aboutus{
 .homeimage{
   position: relative;
   left: 25px;
+}
+
+.line{
+  width: 100px;
+  height:1px;
+  background:#7D7C7C;
+  position: relative;
 }
