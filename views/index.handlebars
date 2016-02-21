@@ -1,77 +1,60 @@
-{{#each homepage}}
-<div class="homescreen">
-  <div class="home-words">
-  {{banner}}
-</div>
-  <div class="homewords">
-    {{banner2}}
-  </div>
-</div>
-{{/each}}
-<!--
 <section>
-  <input type="text" placeholder="Search colleges">
-  <a href="./browse">Search</a>
-</section> -->
-</br>
+  <section class="home-intro-container">
+    <section class="home-intro-text">
+      <div class="home-slogan">Real Students, Honest Stories</div>
+      <div class="home-slogan-details">Understand different campus experiences from actual college students</div>
+    </section>
+    <div class="rounded-outline-button">
+      <a href="#">Take a Tour</a>
+    </div>
+  </section>
 
-{{#each help}}
-<div class="banner3">
-  <img src={{image}} class="homeimage"width:"60px" height="60px">
-  <div class="bannertitle">
-    {{titlehelp}}
-  </div></br>
-  <div class="bannerdescription">
-    {{describe}}
-  </div>
-</div>
-{{/each}}
+  <section class="home-guide-container">
+    <section class="home-guide-content">
+      <div class="home-guide-item">
+        <div class="home-guide-img">
+          <img src="https://image005.flaticon.com/1/svg/74/74472.svg" />
+        </div>
+        <div class="home-guide-text">
+          <div class="home-guide-name">YOU</div>
+          <div class="home-guide-desc">Joe is a senior in high school that was accepted into some colleges, but doesn’t know which is best for him</div>
+        </div>
+      </div>
+      <div class="home-guide-item">
+        <div class="home-guide-img">
+          <img src="https://image005.flaticon.com/1/svg/33/33308.svg" />
+        </div>
+        <div class="home-guide-text">
+          <div class="home-guide-name">pierre</div>
+          <div class="home-guide-desc">pierre allows Joe to connect with mentors from different colleges so that he doesn’t spend money traveling to all the colleges</div>
+        </div>
+      </div>
+      <div class="home-guide-item">
+        <div class="home-guide-img">
+          <img src="https://image005.flaticon.com/1/svg/68/68045.svg" />
+        </div>
+        <div class="home-guide-text">
+          <div class="home-guide-name">MENTOR</div>
+          <div class="home-guide-desc">Sally shares her honest college experience, and tells cool stories along the way so that Joe is better informed to make his decision</div>
+        </div>
+      </div>
+    </section>
+  </section>
 
-<center>
-  <div class="banner4">
-  <p> Ready to start? </p>
-  Let's create an account to start connecting with other students
-<section class="home-account-section">
-  <div class="home-create-button">
-  <a class="roundbutton" href="/create_mentee_login">I'm a high school student</a>
-  </div>
-  <p>OR </p>
-  <div class="home-create-button">
-    <a class="roundbutton" href="/create_mentor_login">I'm a college mentor</a>
-  </div>
+  <section class="home-start-container">
+    <section class="home-start-text">
+      <div class="home-start-title">Ready to Start?</div>
+      <div class="home-start-details">Let's create an account to start connecting with other students</div>
+    </section>
+
+    <div class="home-start-button rounded-button">
+      <a href="/create_mentee_login">I'm a high school student</a>
+    </div>
+    <div class="home-start-text-or">or</div>
+    <div class="home-start-button rounded-button">
+      <a href="/create_mentor_login">I'm a college mentor</a>
+    </div>
+
+  </section>
+
 </section>
-</center>
-</div>
-<!--
-<section id="schools">
-  <div class="container">
-    <div class="row">
-     <div class="col-xs-4 col-md-4">
-      <img src="http://cdn.shopify.com/s/files/1/0213/2686/products/TO_HashtagTriton_01_grande.jpg?v=1397167998" alt="" class="img-responsive img-circle" width="75px">
-    </div>
-    <div class="col-xs-4 col-md-4">
-      <img src="https://c3.staticflickr.com/7/6180/6176530185_eccd397044.jpg" alt="" class="img-responsive img-circle" width="75px">
-    </div>
-    <div class="col-xs-4 col-md-4">
-      <img src="http://cdn.shopify.com/s/files/1/0084/9282/products/Law_School-Gray-W_copy.jpg?v=1404850793" alt="" class="img-responsive img-circle" width="75px">
-    </div>
-  </div>
-</div>
-{{#each links}}
-<div class="container">
-  <div class="row">
-    <div class="col-xs-4 col-md-4">
-      <h3> <a href="{{ucsd}}">UC San Diego </a></h3>
-    </div>
-    <div class="col-xs-4 col-md-4">
-      <h3> <a href="{{stanford}}">Stanford </a></h3>
-    </div>
-    <div class="col-xs-4 col-md-4">
-      <h3> <a href="{{harvard}}">Harvard </a></h3>
-    </div>
-  </div>
-</div>
-{{/each}}
-
-
-</section> -->

@@ -24,14 +24,19 @@ header{
 }
 
 .site-title {
+  z-index: 10;
   margin-top: 10px;
   margin-left: 20px;
   font-size: 20px;
 }
 
+.site-title > a {
+  color: white;
+}
+
 .nav-toggle{
-  cursor: pointer;
   z-index: 10;
+  cursor: pointer;
 }
 
 nav li {
@@ -41,7 +46,6 @@ nav li {
 
 nav ul{
   padding: 5px 0;
-  z-index: -1;
 }
 
 .nav-wrapper {
@@ -161,13 +165,147 @@ nav ul{
  index.handlebars
  ********************************/
 
-.home-account-section {
-  margin-top: 20px;
+.home-intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 45px;
+  text-align: center;
+  background-color: #7A7373;
+  color: white;
+}
+
+.home-intro-text {
+  width: 45%;
+  margin-top: 50px;
+  /* Use rgba because of z index bug */
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.home-slogan {
+  font-size: 22px;
   margin-bottom: 20px;
 }
 
-.home-create-button {
-  margin-bottom: 10px;
+.home-slogan-details {
+  font-size: 14px;
+  margin-bottom: 60px;
+}
+
+.rounded-outline-button {
+}
+
+.rounded-outline-button > a{
+  display: inline-block;
+  width: 180px;
+
+  padding: 14px 28px 13px;
+
+  letter-spacing: 1px;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 500;
+
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 25px;
+  color: white;
+}
+
+.home-guide-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  background-color: #F4F4F4;
+}
+
+.home-guide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.home-guide-item {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin-bottom: 15px;
+}
+
+.home-guide-img {
+  align-self: flex-end;
+  width: 50px;
+  margin-bottom: 12px;
+  margin-left: 25px;
+  margin-right: 35px;
+}
+
+.home-guide-img > img {
+  width: 100%;
+}
+
+.home-guide-text {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.home-guide-name {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.home-guide-desc {
+  font-size: 12px;
+  color: #818181;
+}
+
+.home-start-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: white;
+}
+
+.home-start-text {
+  width: 200px;
+  text-align: center;
+  color: #818181;
+  margin-bottom: 25px;
+}
+
+.home-start-title {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.home-start-details {
+  font-size: 14px;
+}
+
+.home-start-button.rounded-button {
+  width: 250px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: inherit;
+}
+
+.home-start-text-or {
+  font-size: 14px;
+  color: #818181;
+  margin-bottom: 15px;
+}
+
+
+.line{
+  width: 100px;
+  height:1px;
+  background:#7D7C7C;
+  position: relative;
 }
 
 .browse-background, .appointment-item{
@@ -194,6 +332,7 @@ position:relative;
 .appointment-info{
   font-size: 1.0em;
 }
+
 
 /*
 .browse-college-item{
@@ -500,74 +639,12 @@ p.aboutus{
     border: 2px solid;
     font-size: 10px;
 }
+
 .footer{
   color: white;
   background: #ED7F82;
   overflow: hidden;
   white-space: nowrap;
-}
-
-.homescreen{
-  background-color: #7A7273;
-  color: white;
-  text-align: center;
-}
-
-.home-words{
-  font-weight: bold;
-  font-size: 15px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.homewords{
-  font-size:11px;
-  word-break: normal;
-  padding: 25px;
-}
-
-.banner3{
-  background-color: #F4F4F4;
-  height:100px;
-}
-
-.banner4{
-  background-color: white;
-  padding: 20px;
-  color:#777777;
-}
-
-.bannertitle, p.banner, .stu-title{
-  font-weight: bold;
-}
-
-.stu-info, .confirmtext{
-  position: relative;
-  padding-bottom:5px;
-  width:200px;
-}
-.bannerdescription{
-  color:#818181;
-  font-size: 11px;
-  left: 90px;
-  bottom:80px;
-  text-align: left;
-  width: 200px;
-}
-
-.bannertitle{
-  left:90px;
-  bottom:60px;
-}
-.homeimage{
-  left: 25px;
-}
-
-.line{
-  width: 100px;
-  height:1px;
-  background:#7D7C7C;
-  position: relative;
 }
 
 /********************************
@@ -587,7 +664,7 @@ p.aboutus{
   flex-direction: column;
   align-items: center;
 
-  width: 800px;
+  width: 100%;
   padding-bottom: 15px;
 
   background-color: white;
@@ -655,7 +732,7 @@ div.studentpage-divider {
   flex-direction: column;
   align-items: center;
 
-  width: 800px;
+  width: 100%;
   padding-bottom: 25px;
 
   background-color: white;
@@ -677,8 +754,6 @@ div.studentpage-divider {
 }
 
 .studentpage-appointments {
-  max-width: 500px;
-  width: 43%;
   padding-bottom: 15px;
 }
 
@@ -693,7 +768,7 @@ div.studentpage-divider {
   -webkit-appearance: none;
   appearance: none;
 
-  margin-left: 15px;
+  margin-left: 10px;
   margin-bottom: 15px;
   padding-right: 15px;
 
@@ -773,7 +848,7 @@ input[type="radio"]:checked.apt-radio ~ .rounded-select-button {
   margin-bottom: 25px;
 }
 
-.rounded-button{
+.rounded-button {
   display: inline-block;
 
   margin-bottom: 30px;
@@ -788,4 +863,9 @@ input[type="radio"]:checked.apt-radio ~ .rounded-select-button {
   border: 2px solid #EB7E7E;
   border-radius: 25px;
   color: white;
+}
+
+.rounded-button > a {
+  color: white;
+  font-weight: inherit;
 }
