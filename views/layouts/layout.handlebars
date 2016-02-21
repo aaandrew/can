@@ -9,40 +9,62 @@
     <link rel="stylesheet" href="css/index.css">
   </head>
 
+<!--
   <div class="nav">
-            <ul>
-            <div class="container">
-              <div class="row">
-                  <div class="col-xs-4 col-md-4">
-              <li class="myprofile"><a href="/"> pierre </a></li>
-                  </div>
-                  <div class="col-xs-4 col-md-4">
-                    <section>
-                      <input type="text" id="searchbar" placeholder="Search colleges" size="5">
-                        <a href="./browse"><span class="glyphicon glyphicon-search"</a>
-                    </section>
-                  </div>
-                  <div class="col-xs-3 col-md-3">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> More <span class="caret"></span>
-                        <ul class="dropdown-menu">
-                          <li><a href="/login">Login</a></li>
-                          <li><a href="/dashboard">Appointments</a></li>
-                          <li><a href="/browse"> Browse Colleges</a></li>
-                          <!-- Placeholders -->
-                          <li><a href="/editmenteeacc"> Edit Mentee Acc</a> </li>
-                          <li><a href="/editmentoracc"> Edit Mentor Acc</a></li>
-                          <!-- <li><a href="/studentbio">Page 1</a></li>-->
-                        </ul>
-                    </li>
-                  </div>
-              </div>
+    <ul>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-4 col-md-4">
+            <li class="myprofile"><a href="/"> pierre </a></li>
+          </div>
+          <div class="col-xs-4 col-md-4">
+            <section>
+              <input type="text" id="searchbar" placeholder="Search colleges" size="5">
+              <a href="./browse"><span class="glyphicon glyphicon-search"</a>
+            </section>
+          </div>
+          <div class="col-xs-3 col-md-3">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> More <span class="caret"></span>
+                <ul class="dropdown-menu">
+                  <li><a href="/login">Login</a></li>
+                  <li><a href="/dashboard">Appointments</a></li>
+                  <li><a href="/browse"> Browse Colleges</a></li>
+                  // Placeholders
+                  <li><a href="/editmenteeacc"> Edit Mentee Acc</a> </li>
+                  <li><a href="/editmentoracc"> Edit Mentor Acc</a></li>
+                  // <li><a href="/studentbio">Page 1</a></li>
+                </ul>
+              </li>
             </div>
-            </ul>
-  </div>
+          </div>
+        </div>
+      </ul>
+    </div>
+    -->
 
   <body>
+    <header>
+      <div class="nav-wrapper">
+        <div class="site-title">pierre</div>
+        <div id="nav-icon1" class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="main-navigation" role='navigation'>
+          <ul>
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">APPOINTMENTS</a></li>
+            <li><a href="#">BROWSE COLLEGES</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="body-container">
     {{{body}}}
+    </div>
 <!--     <footer>
         <div class="footer">
 
