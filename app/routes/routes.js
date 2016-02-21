@@ -94,4 +94,8 @@ module.exports = function (app) {
 	app.get('/editmentoracc',function(req,res){
 		res.render('editmentoracc');
 	});
+
+	app.get('/studentpage', function(req, res){
+		res.render('studentpage');
+	});
 };

@@ -156,7 +156,7 @@ a:link{
 .student li {
   text-align: left;
 }
-#stuPicture,p{
+#stuPicture p{
   text-align:center;
 }
 .studentname{
@@ -388,4 +388,224 @@ td.avaliabilitybox{
 
 .homeimage{
   float:left;
+}
+
+/********************************
+ studentpage.handlebars
+ ********************************/
+
+.studentpage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: initial;
+  color: #333333;
+}
+
+.studentpage-img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 800px;
+  padding-bottom: 15px;
+
+  background-color: white;
+}
+
+.studentpage-img {
+  margin-top: 15px;
+  width: 250px;
+}
+
+.studentpage-img > img {
+  height: 100%;
+  width: 100%;
+}
+
+.studentpage-img-name {
+  margin-top: 20px;
+
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.studentpage-img-college {
+  font-size: 17px;
+}
+
+.studentpage-bio {
+  width: 290px;
+  padding-bottom: 25px;
+  font-size: 14px;
+}
+
+.studentpage-bio b {
+  font-size: 18px;
+}
+
+.studentpage-bio > div {
+  margin-top: 20px;
+}
+
+div.studentpage-divider {
+    height: 1px;
+    width: 200px;
+
+    border-bottom: 1px solid #979797;
+}
+
+.studentpage-question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 290px;
+  margin-top: 30px;
+}
+
+.studentpage-question-container > textarea {
+  height: 150px;
+  width: inherit;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.studentpage-appointment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 800px;
+  padding-bottom: 25px;
+
+  background-color: white;
+}
+
+.studentpage-appointment-text {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.studentpage-apt-title {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.studentpage-apt-details {
+  font-size: 14px;
+}
+
+.studentpage-appointments {
+  max-width: 500px;
+  width: 43%;
+  padding-bottom: 15px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.studentpage-apt-select {
+  -webkit-appearance: none;
+  appearance: none;
+
+  margin-left: 15px;
+  margin-bottom: 15px;
+  padding-right: 15px;
+
+  background: url("../images/nav-arrow.png") no-repeat transparent;
+  background-position: 100% 80%;
+  background-size: 10px;
+
+  border: none;
+  cursor: pointer;
+
+  font-size: 14px;  
+  font-weight: 700;
+}
+
+.rounded-select-button, .rounded-select-button:focus {
+  -webkit-appearance: none;
+  apperance: none;
+  display: inline-block; 
+
+  padding: 11px 11px 11px;
+
+  background: 0 0;
+  border: 2px solid #EB7E7E;
+  border-radius: 25px;
+
+  color: #EB7E7E;
+  line-height: 1;
+  font-size: 11px; 
+  font-weight: 500;
+
+  transition: all .3s ease;
+}
+
+
+.rounded-select-button:hover{
+  background: #EB7E7E;
+  border-color: #EB7E7E;
+  color: white;
+}
+
+input[type="radio"].apt-radio {
+  display: none;
+}
+
+input[type="radio"]:checked.apt-radio ~ .rounded-select-button {
+  background: #EB7E7E;
+  border-color: #EB7E7E;
+  color: white;
+}
+
+
+.studentpage-apt-confirm-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 250px;
+  margin-top: 25px;
+
+  text-align: center;
+  background-color: white;
+}
+
+.studentpage-apt-confirm-title {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.studentpage-apt-confirm-details {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.studentpage-apt-confirm-time {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.rounded-button{
+  display: inline-block;
+
+  margin-bottom: 30px;
+  padding: 14px 28px 13px;
+
+  letter-spacing: 1px;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 500;
+
+  background: #EB7E7E;
+  border: 2px solid #EB7E7E;
+  border-radius: 25px;
+  color: white;
 }
