@@ -1,4 +1,11 @@
-{
-  "name": "Sally Yu"
-
-}
+  {
+    "image": "/images/jesse.jpg",
+    "name": "Jesse Qin",
+    "school": "UC San Diego",
+    "title": "Background",
+    "background": "Hi! I'm Jesse! I'm a graduate student majoring in computer science at UCSD. I am currently a teaching assistant for a HCI course.",
+    "title2": "How I can help",
+    "help": "I am friends with many people from different majors and backgrounds. I can share some really cool stories from them, or I can share my own insights that I've learned from my four years at UCSD.",
+    "title3": "Interests",
+    "interests": "I enjoy running, biking, and running 5k's. On my spare time, I usually got eat hot pot!"
+  }

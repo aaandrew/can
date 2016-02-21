@@ -9,26 +9,26 @@ a:link{
 
 .nav ul {
   list-style: none;
-  background-color: #666666;
+  background-color: #ED7F82;
   text-align: center;
   font-size: 0.7em;
   padding: 0px;
   margin: 0;
-}
+}/*
 .nav li{
   font-family: 'Arial', sans-serif;
-  text-align: -4;
-  font-size: 1.0em;
-  line-height: 60px;
-  height: 40px;
+  font-size: 1.2em;
+  height:20px;
+  line-height: 20px;
 }
+*/
+
 
 
 
 .nav a{
   text-decoration: none;
   color: #fff;
-  display: block;
   font-size: 0.9em;
   transition: .3s background-color;
 }
@@ -38,20 +38,16 @@ a:link{
 }
 
 
-@media screen and (min-width: 50px) {
+@media screen  {
   .nav li {
     width: 100px;
     border-bottom: none;
-    height: 50px;
+    height: 30px;
     line-height: 50px;
-    font-size: 1.4em;
+    font-size: 1.2em;
+    float:left;
   }
-
-  /* Option 1 - Display Inline */
-  .nav li {
-    display: inline-block;
-    margin-right: 0px;
-  }
+}
 
 
 /********************************
@@ -68,9 +64,42 @@ a:link{
 }
 
 
+
+.browse-background, .appointment-item{
+  width: 325px;
+  height: 150px;
+  padding-top:10px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white;
+}
+
+
+.browse-college-info,.appointment-info{
+left: 135px;
+top:-130px;
+width:180px;
+word-wrap: break-word;;
+position:relative;
+}
+
+
+.appointment-info{
+  font-size: 1.0em;
+}
+
+/*
+.browse-college-item{
+  background-color: white;
+  height:auto;
+  padding-bottom: 20px;
+} */
 /********************************
  browse.handlebars
- ********************************/
+ ********************************
+
 
 .browse-background {
   height: inherit;
@@ -136,7 +165,7 @@ a:link{
 
 .browse-college-text > span {
   margin-left: 7px;
-}
+} */
 
 /********************************
  college pages: ucsd.handlebars, stanford.handlebars, etc
@@ -219,16 +248,6 @@ p.aboutus{
   top:1px;
 }
 
-td.avaliable{
-  background-color: #33ccff;
-}
-
-td.avaliabilitybox{
-  background-color: #33ccff;
-  height:20px;
-  width:20px;
-  border:solid 1px;
-}
 
 #searchbar{
   margin-top: 15px;
@@ -242,7 +261,7 @@ td.avaliabilitybox{
 
 /********************************
  dashboard.handlebars
- ********************************/
+ ********************************
 
  .appointment-item {
     // display: block;
@@ -326,7 +345,17 @@ td.avaliabilitybox{
   font-weight: bold;
 }
 
-.formh6{
+.pagecolor{
+  color:#ED7F82;
+}
+
+.studentbio{
+  background-color: #F4F4F4;
+}
+.appointment-bg, .stu-name{
+  background-color: white;
+}
+.formh6, .create-form-item{
   color: #ED7F82;
   font-weight: bold;
 }
@@ -339,6 +368,33 @@ td.avaliabilitybox{
     padding: 10px;
 }
 
+.roundbutton2{
+    color: #FFFFFF;
+    background: #ED7F82;
+    border: 5px;
+    border-radius: 25px;
+    padding: 10px;
+    border: 2px solid;
+    font-size: 10px;
+}
+.notavalibutton{
+    background-color: #FFFFFF;
+    color: #808080;
+    border: 5px;
+    border-radius: 25px;
+    padding: 10px;
+    border: 2px solid;
+    font-size: 10px;
+}
+.avalibutton{
+    color: #ED7F82;
+    background: #FFFFFF;
+    border: 5px;
+    border-radius: 25px;
+    padding: 10px;
+    border: 2px solid;
+    font-size: 10px;
+}
 .footer{
   color: white;
   background: #ED7F82;
@@ -347,7 +403,7 @@ td.avaliabilitybox{
 }
 
 .homescreen{
-  background-color: #7B7273;
+  background-color: #7A7273;
   color: white;
   text-align: center;
 }
@@ -367,27 +423,49 @@ td.avaliabilitybox{
 
 .banner3{
   background-color: #F4F4F4;
+  height:100px;
 }
 
 .banner4{
   background-color: white;
   padding: 20px;
-  color:#AFAFB0;
+  color:#777777;
 }
 
-.bannertitle{
+.bannertitle, p.banner, .stu-title{
   font-weight: bold;
 }
 
+.stu-info, .confirmtext{
+  position: relative;
+  padding-bottom:5px;
+  width:200px;
+}
 .bannerdescription{
-  color:#AFAFB0;
+  color:#818181;
   font-size: 11px;
-  padding: 10px;
-
+  position: relative;
+  left: 90px;
+  bottom:80px;
+  text-align: left;
+  width: 200px;
 }
 
+.bannertitle{
+  left:90px;
+  bottom:60px;
+  position: relative;
+}
 .homeimage{
-  float:left;
+  position: relative;
+  left: 25px;
+}
+
+.line{
+  width: 100px;
+  height:1px;
+  background:#7D7C7C;
+  position: relative;
 }
 
 /********************************

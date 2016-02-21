@@ -27,6 +27,17 @@
 
 		"ucsdstudents":[
 			{
+				"name": "Jesse Qin",
+				"href": "/student",
+				"year": "1st Year Master's Student",
+				"major": "major: Computer Science",
+				"college": "Graduate Student",
+				"fraternity": "Is a Teaching Assistant for a HCI course",
+				"extracurriculars": "Extracurriculars: Biking, running 5K's",
+				"housing": "Lives: Off-Campus Apartments",
+				"image": "/images/jesse.jpg"
+			},
+			{
 				"name": "Sally Yu",
 				"href": "/student",
 				"year": "3rd Year",
