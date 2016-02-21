@@ -1,36 +1,25 @@
 <center>
-<div class="title">Login Here! </div>
-</br>
-<tr>
-    <label for="email" class="pagecolor">EMAIL:</label>
-  </tr>
-<tr></br>
-    <input  type="text" name="email" class="pagecolor" placeholder="Enter your email" maxlength="25" size="25">
-</tr></br>
-<tr>
-    <label for="password" class="pagecolor">PASSWORD:</label>
-</tr>
-<tr></br>
-    <input  type="text" name="password" class="pagecolor" placeholder="Enter your password" maxlength="25" size="25">
-</tr></br>
-</tr></br>
+  <div class="title">Login</div>
 
-<input type="checkbox" name="password" value="passwordRemember"> Remember Password<br>
+  <form action="/login" method="post">
+    <div>
+      <div class="pagecolor">EMAIL</div>
+       <input  type="email" name="email" class="pagecolor" placeholder="Enter your email" maxlength="25" size="25" />
+    </div>
 
-</br>
-Need an account?</br>
-<a href="/index"> Create an account here </a>
-</br></br>
-<section class="Login">
-  <div class="Login-button">
-  <a class="roundbutton" href="/browse">Login</a>
-  </div>
- </tr></br>
-</section>
+    <div>
+      <div class="pagecolor">PASSWORD</div>
+      <input  type="password" name="password" class="pagecolor" placeholder="Enter your password" maxlength="25" size="25" />
+    </div>
+    <div>
+      <div>Need an account?</div>
+      <a href="/index"> Create an account here </a>
+    </div>
 
-
-</tr>
-</br>
-</br>
-
+    <section class="Login">
+      <div class="Login-button">
+        <input class="roundbutton" type="submit" value="Login" />
+      </div>
+    </section>
+  </form>
 </center>

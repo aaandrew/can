@@ -53,11 +53,6 @@ module.exports = function (app) {
 		res.render('studentbio', data);
 	});
 
-
-	app.get('/login', function(req, res) {
-		res.render('login', data)
-	});
-
 	app.get('/dashboard', function(req, res){
 		res.render('dashboard', dashboardData);
 	});

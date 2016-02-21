@@ -1,45 +1,35 @@
 <center>
-<div class="title"> Welcome Mentors! </div>
-<div class="create-form-item">
-<tr>
-    <label for="name">Full Name:</label>
-  </tr>
-<tr></br>
-    <input  type="text" name="Full Name" maxlength="25" size="25">
-</tr></br>
-<tr>
-    <label for="email">Email:</label>
-</tr>
-<tr></br>
-    <input  type="text" name="Email" maxlength="25" size="25">
-</tr></br>
-<tr>
-    <label for="password">Password:</label>
-</tr>
-<tr></br>
-    <input  type="text" name="Password" maxlength="25" size="25">
-</tr></br>
-<tr>
-    <label for="confirm password">Confirm Password:</label>
-</tr>
-<tr></br>
-    <input  type="text" name="Confirm Password" maxlength="25" size="25">
-</tr></br>
-</tr></br>
-</tr></br>
-</div>
-<input type="checkbox" name="password" value="passwordRemember"> Remember Password<br>
+  <div class="title">New Mentor Account</div>
 
-</tr></br>
+  <form action="/create/mentor" method="post">
+    <div class="create-form-item">
+      <div>
+        <div>
+          <label for="name">Full Name</label>
+        </div>
+        <input type="text" name="name" maxlength="25" size="25" />
+      </div>
 
-<section class="create-account">
-  <div class="create-account-button">
-  <a class="roundbutton" href="./create_mentor">Create Account</a>
-  </div>
- </tr></br>
+      <div>
+        <div>
+          <label for="email">Email</label>
+        </div>
+        <input type="email" name="email" maxlength="25" size="25" />
+      </div>
 
-</tr>
-</br>
-</br>
+      <div>
+        <div>
+          <label for="password">Password</label>
+        </div>
+        <input type="password" name="password" maxlength="25" size="25">
+      </div>
 
+    </div>
+
+    <section class="create-account">
+      <div class="create-account-button">
+        <input class="roundbutton" type="submit" value="Create Account" />
+      </div>
+    </section>
+  </form>
 </center>
