@@ -1,5 +1,10 @@
+{{> navbar}}
 <center>
   <div class="title">Login</div>
+
+  {{#if message}}
+    <div class="alert alert-danger">{{message}}</div>
+  {{/if}}
 
   <form action="/login" method="post">
     <div>

@@ -1,7 +1,13 @@
+{{> navbar}}
 <center>
   <div class="title">New Mentor Account</div>
 
-  <form action="/create/mentor" method="post">
+  {{#if message}}
+    <div class="alert alert-danger">{{message}}</div>
+  {{/if}}
+
+  <form action="/signup/mentor" method="post">
+    <input type="hidden" name="isMentor" value="true">
     <div class="create-form-item">
       <div>
         <div>

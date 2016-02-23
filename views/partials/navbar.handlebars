@@ -1,0 +1,23 @@
+<header>
+  <div class="nav-wrapper">
+    <div class="site-title"><a href="/">pierre</a></div>
+    <div id="nav-icon1" class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="main-navigation" role='navigation'>
+      <ul>
+        {{#if mentor}}
+          <li><a href="/edit/mentor">ACCOUNT</a></li>
+        {{else if mentee}}
+          <li><a href="/edit/mentee">ACCOUNT</a></li>
+        {{else}}
+          <li><a href="/login">LOGIN</a></li>
+        {{/if}}
+        <li><a href="/dashboard">APPOINTMENTS</a></li>
+        <li><a href="/browse">BROWSE COLLEGES</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

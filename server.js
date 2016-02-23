@@ -6,6 +6,14 @@ var handlebars = require('express-handlebars');
 var dotenv = require('dotenv');
 var mongoose = require('mongoose');
 
+// Auth
+var passport = require('passport');
+var session = require('express-session');
+var flash    = require('connect-flash');
+
+// Load passport
+require('./app/routes/passport')(passport);
+
 var app = express();
 
 // Load environment variables
@@ -20,6 +28,16 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.set('port', process.env.PORT || 3000);
 
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false }
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+
 //connect to database
 mongoose.connect(process.env.MONGOLAB_URI);
 var db = mongoose.connection;
@@ -29,10 +47,10 @@ db.once('open', function (callback) {
 });
 
 // Load routes
-require('./app/routes/routes')(app);
-require('./app/routes/login')(app);
-require('./app/routes/mentor')(app);
-require('./app/routes/mentee')(app);
+require('./app/routes/routes')(app, passport);
+require('./app/routes/login')(app, passport);
+require('./app/routes/mentor')(app, passport);
+require('./app/routes/mentee')(app, passport);
 
 /*
 var ucsd = require('./app/routes/ucsd');

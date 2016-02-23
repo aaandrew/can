@@ -3,7 +3,10 @@ var browseData = require("../data/browse.json");
 var dashboardData = require("../data/dashboard_data.json");
 var studentData = require("../data/student.json");
 
-module.exports = function (app) {
+// Function used to merge json objects
+var extend = require('util')._extend;
+
+module.exports = function (app, passport) {
 	app.get('/', function(req, res){
 		res.render('index', data);
 	});
@@ -14,18 +17,6 @@ module.exports = function (app) {
 
 	app.get('/ucsd', function(req,res){
 		res.render('ucsd', data);
-	});
-
-	app.get('/about', function(req,res){
-		res.render('about', data);
-	});
-
-	app.get('/faq', function(req,res){
-		res.render('faq', data);
-	});
-
-	app.get('/contactus', function(req,res){
-		res.render('contactus', data);
 	});
 
 	app.get('/student', function(req, res){
@@ -53,44 +44,26 @@ module.exports = function (app) {
 		res.render('studentbio', data);
 	});
 
-	app.get('/dashboard', function(req, res){
-		res.render('dashboard', dashboardData);
-	});
-
-	app.get('/create_mentee', function(req, res){
-		res.render('create_account_mentee');
-	});
-
-	app.get('/create_mentee_login', function(req, res){
-		res.render('create_mentee_login');
-	});
-
-	app.get('/create_mentor', function(req, res){
-		res.render('create_account_mentor');
-	});
-
-	app.get('/create_mentor_login', function(req, res){
-		res.render('create_mentor_login');
+	app.get('/dashboard', isLoggedIn, function(req, res){
+		var data = {};
+		if(req.user.mentor) data.mentor = true;
+		else if(req.user.mentee) data.mentee = true;
+		res.render('dashboard', extend(data, dashboardData));
 	});
 
 	app.get('/create_account_from_login', function(req, res){
 		res.render('create_account_from_login');
 	});
 
-
-	app.get('/index', function(req, res){
-		res.render('index');
-	});
-
-	app.get('/editmenteeacc',function(req,res){
-		res.render('editmenteeacc');
-	});
-
-	app.get('/editmentoracc',function(req,res){
-		res.render('editmentoracc');
-	});
-
 	app.get('/studentpage', function(req, res){
 		res.render('studentpage');
 	});
+
+	function isLoggedIn(req, res, next) {
+    if (req.user) {
+      next();
+    } else {
+      res.redirect('/login');
+    }
+  }
 };

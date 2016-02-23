@@ -1,28 +1,36 @@
-var querystring = require('querystring');
+module.exports = function (app, passport) {
 
-var Mentor = require('../models/mentor');
-
-module.exports = function (app) {
-  app.get('/create/mentor', function(req, res){
-    res.render('create_mentor_login');
-  });  
-
-  app.get('/edit/mentor', function(req, res){
-    console.log("yas", req.query);
-    res.render('edit_mentor', req.query);
+  // Loads page for creating a new mentor account
+  app.get('/signup/mentor', function(req, res){
+    res.render('create_mentor_login', {message: req.flash('signup-message')});
   });
 
-  app.post('/create/mentor', function(req, res){
-    // Create mentor
-    var mentor =  new Mentor(req.body);
-    mentor.save(function(err){
-      if(err) console.error("Error saving mentor", err);
-    });
+  // Creates new mentor account
+  app.post('/signup/mentor',
+    passport.authenticate('local-signup', {
+      successRedirect: '/edit/mentor',
+      failureRedirect: '/signup/mentor',
+      failureFlash: true
+    }));
 
-    // Redirect to edit page with passed in param body
-    var editMentorUrl = '/edit/mentor?' + querystring.stringify(req.body); 
-    res.redirect(editMentorUrl);
-    res.end();
+  // Loads page for editing mentor account
+  // Redirects to login page if user is not logged in
+  app.get('/edit/mentor', isMentor, function(req, res){
+    // Grab user from session
+    var user = {
+      name: req.user.name,
+      email: req.user.email
+    };
+    res.render('edit_mentor', user);
   });
+
+  // Middleware to check if user is logged in
+  function isMentor(req, res, next) {
+    if (req.user && req.user.mentor) {
+      next();
+    } else {
+      res.redirect('/login');
+    }
+  }
 
 };

@@ -1,47 +1,42 @@
+{{> navbar}}
 <center>
-  <div class="title"> Welcome Mentees! </div>
-<tr>
-  <div class="create-form-item">
-    <label for="name">Full Name:</label>
-  </tr>
-<tr></br>
-    <input  type="text" name="Full Name" maxlength="25" size="25">
-</tr></br>
-<tr>
-    <label for="email">Email:</label>
-</tr>
-<tr></br>
-    <input  type="text" name="Email" maxlength="25" size="25">
-</tr></br>
-<tr>
-    <label for="password">Password:</label>
-</tr>
-<tr></br>
-    <input  type="text" name="Password" maxlength="25" size="25">
-</tr></br>
-<tr>
-    <label for="confirm password">Confirm Password:</label>
-</tr>
-<tr></br>
-    <input  type="text" name="Confirm Password" maxlength="25" size="25">
-</tr></br>
-</tr></br>
-</tr></br>
-
-</div>
-<input type="checkbox" name="password" value="passwordRemember"> Remember Password<br>
-
-</tr></br>
-
-<section class="create-account">
-  <div class="create-account-button">
-  <a class="roundbutton" href="./create_mentee">Create Account</a>
-  </div>
- </tr></br>
+  <div class="title">New Mentee Account</div>
+  {{#if message}}
+    <div class="alert alert-danger">{{message}}</div>
+  {{/if}}
 
 
-</tr>
-</br>
-</br>
+  <form action="/signup/mentee" method="post">
+    <input type="hidden" name="isMentor" value="false">
+    <div class="create-form-item">
+      <div>
+        <div>
+          <label for="name">Full Name</label>
+        </div>
+        <input type="text" name="name" maxlength="25" size="25" />
+      </div>
+
+      <div>
+        <div>
+          <label for="email">Email</label>
+        </div>
+        <input type="email" name="email" maxlength="25" size="25" />
+      </div>
+
+      <div>
+        <div>
+          <label for="password">Password</label>
+        </div>
+        <input type="password" name="password" maxlength="25" size="25">
+      </div>
+
+    </div>
+
+    <section class="create-account">
+      <div class="create-account-button">
+        <input class="roundbutton" type="submit" value="Create Account" />
+      </div>
+    </section>
+  </form>
 
 </center>
