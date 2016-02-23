@@ -29,7 +29,7 @@ $(document).ready(function(){
   /******** index.handlebars code ********/
 
   // Scroll to div on homepage
-  $('a').click(function(){
+  $('#home-tour, #login-account-link').click(function(){
     $('html, body').animate({
       scrollTop: $( $(this).attr('href') ).offset().top
     }, 500);
