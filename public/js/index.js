@@ -26,5 +26,14 @@ $(document).ready(function(){
     $('.main-navigation').toggleClass('open');
   });
 
+  /******** index.handlebars code ********/
+
+  // Scroll to div on homepage
+  $('a').click(function(){
+    $('html, body').animate({
+      scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+  });
   
 });
