@@ -19,6 +19,9 @@ module.exports = function (app, passport) {
 		res.render('ucsd', data);
 	});
 
+	app.get('/ucsd_2', function(req,res){
+		res.render('ucsd_2', data);
+	});
 	app.get('/student', function(req, res){
 		res.render('student', studentData);
 	});

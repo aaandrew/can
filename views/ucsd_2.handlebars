@@ -1,0 +1,51 @@
+{{> navbar}}
+<center>
+	<div class="ucsd_2">
+	<img src="http://ucsdnews.ucsd.edu/graphics/images/2010/09-08UCSD-quad.jpg" alt="" height="100%" width="100%">
+<div class="browse-ucsd-img">
+	<img src="/images/ucsd.jpg" class="img-border"height="50%" width="50%">
+</div></br></br>
+<div class="studentpage-img-name">UC San Diego</div>
+<div class="studentpage-img-location"> La Jolla, CA </div>
+<div class="studentpage-img-college_2">
+	The University of California, San Diego is a student-centered,
+	research-focused, service-oriented public instituation that
+	provides opportunty for all. Recognized as one of the top 15
+	research universities worldwide, a culture of collaboration
+	sparks disscoveries that advance society and drive economic impact.
+</div>
+
+<div class="browse-items">
+	<div class="glyphicon glyphicon-th"></div>
+	<span>23,000 undergraduates</span></br>
+	<div class="glyphicon glyphicon-th"></div>
+	<span>33% acceptance</span>
+</div>
+</div>
+
+<div class="mentors">
+	<h4> Meet our Mentors </h4>
+	<h6> Schedule an appointment to learn real experiences from actual students </h6>
+
+</center>
+
+{{#each ucsdstudents2}}
+<div class="browse-background">
+	<div class="browse-container">
+		<img src="{{image}}" height="125px" width="125px"/>
+		<div class="browse-college-info">
+		<span class="browse-college-name"><a href="{{href}}">{{name}}</a></span><br/>
+		<span class="browse-college-location">{{location}}</span><br/>
+		<section class="browse-college-text2">
+			<div class="glyphicon glyphicon-th"></div>
+			<span><b>{{class}}</b>    {{year}}</span><br/>
+			<div class="glyphicon glyphicon-th"></div>
+			<span><b>{{major2}}</b>   {{major}}</span></br>
+			<div class="glyphicon glyphicon-th"></div>
+			<span><b>{{appointments}}</b>  {{appointments2}}</span><br/>
+		</section>
+	</div>
+</div>
+</div>
+{{/each}}
+</div>

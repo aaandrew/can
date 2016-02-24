@@ -28,7 +28,7 @@
 		"ucsdstudents":[
 			{
 				"name": "Jesse Qin",
-				"href": "/student",
+				"href": "/studentpage",
 				"year": "1st Year Master's Student",
 				"major": "major: Computer Science",
 				"college": "Graduate Student",
@@ -39,7 +39,7 @@
 			},
 			{
 				"name": "Sally Yu",
-				"href": "/student",
+				"href": "/studentpage",
 				"year": "3rd Year",
 				"major": "Major: Psychology",
 				"college": "College: Revelle College",
@@ -50,7 +50,7 @@
 			},
 			{
 				"name": "Dave Young",
-				"href":"/student",
+				"href":"/studentpage",
 				"year": "2nd Year",
 				"major": "Major: Biology",
 			  "college" : "College: Sixth College",
@@ -61,7 +61,7 @@
 			},
 			{
 				"name": "Andrew Walker",
-				"href": "/student",
+				"href": "/studentpage",
 				"year": "4th Year",
 				"major": "Major: Computer Science",
 			  "college" : "College: Muir College",
@@ -71,6 +71,56 @@
 				"image": "http://cdn.shopify.com/s/files/1/0213/2686/products/TO_HashtagTriton_01_b8b17631-824c-494f-820a-47f568557fb8_grande.jpg?v=1402964645"
 			}
 	],
+	"ucsdstudents2":[
+		{
+			"name": "Jesse Qin",
+			"href": "/studentpage",
+			"class": "Class",
+			"year": "1st Year Master's Student",
+			"major": "Computer Science",
+			"major2": "Major",
+			"location": "UC San Diego",
+			"appointments": "Appointments",
+			"appointments2": "15 Completed",
+			"image": "/images/jesse.jpg"
+		},
+		{
+			"name": "Sally Yu",
+			"href": "/studentpage",
+			"class": "Class",
+			"year": "3rd Year Undergraduate",
+			"location": "UC San Diego",
+			"major": "Psychology",
+			"major2": "Major",
+			"appointments": "Appointments",
+			"appointments2": "15 Completed",
+			"image": "http://cdn.shopify.com/s/files/1/0213/2686/products/TO_HashtagTriton_01_grande.jpg?v=1397167998"
+		},
+		{
+			"name": "Dave Young",
+			"href":"/studentpage",
+			"class": "Class",
+			"year": "2nd Year Undergraduate",
+			"major": "Biology",
+			"major2": "Major",
+			"location": "UC San Diego",
+			"appointments": "Appointments",
+			"appointments2": "15 Completed",
+			"image": "http://cdn.shopify.com/s/files/1/0213/2686/products/TO_SpiritSweater_grande.jpg?v=1366404617"
+		},
+		{
+			"name": "Andrew Walker",
+			"href": "/studentpage",
+			"class": "Class",
+			"year": "4th Year Undergraduate",
+			"major": "Computer Science",
+			"location": "UC San Diego",
+			"major2": "Major",
+			"appointments": "Appointments",
+			"appointments2": "15 Completed",
+			"image": "http://cdn.shopify.com/s/files/1/0213/2686/products/TO_HashtagTriton_01_b8b17631-824c-494f-820a-47f568557fb8_grande.jpg?v=1402964645"
+		}
+],
 				"homepage":[
 					{
 						"banner": "Real Students, Honest Stories",
@@ -99,7 +149,7 @@
 			"stanford":[
 				{
 					"name": "Meagan Rosen",
-					"href": "/student",
+					"href": "/studentpage",
 					"year": "2nd Year",
 					"major": "Major: Communications",
 					"extracurriculars": "Extracurriculars: Tennis",
@@ -108,7 +158,7 @@
 				},
 				{
 					"name": "Brandon Dye",
-					"href": "/student",
+					"href": "/studentpage",
 					"year": "3rd Year",
 					"major": "Major: Chemical Engineering",
 					"extracurriculars": "Extracurriculars: Basketball",
@@ -117,7 +167,7 @@
 				},
 				{
 					"name": "Gabriel Castro",
-					"href": "/student",
+					"href": "/studentpage",
 					"year": "4th Year",
 					"major": "Major: Physics",
 					"extracurriculars": "Extracurriculars: Undergraduate Researcher, Football",
@@ -128,7 +178,7 @@
 		"harvard":[
 		{
 			"name": "Michelle Soto",
-			"href": "/student",
+			"href": "/studentpage",
 			"year": "3nd Year",
 			"major": "Major: History and Literature",
 			"fraternity": "Greek Sorority: Kappa Alpha Theta",
@@ -138,7 +188,7 @@
 		},
 		{
 			"name": "Rose Meyers",
-			"href": "/student",
+			"href": "/studentpage",
 			"year": "4th Year",
 			"major": "Major: Music",
 			"fraternity": "Greek Sorority: Delta Gamma",
@@ -148,7 +198,7 @@
 		},
 		{
 			"name": "Gabriel Castro",
-			"href": "/student",
+			"href": "/studentpage",
 			"year": "3rd Year",
 			"major": "Major: Biochemistry",
 			"fraternity": "Greek Fraternity: Sigma Chi",
