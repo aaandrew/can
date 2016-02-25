@@ -46,7 +46,7 @@
 				"fraternity": "Greek Sorority: Delta Gamma",
 				"extracurriculars": "Extracurriculars: Tennis, Undergraduate Researcher",
 				"housing":" Lives: On-Campus Apartments",
-				"image": "http://cdn.shopify.com/s/files/1/0213/2686/products/TO_HashtagTriton_01_grande.jpg?v=1397167998"
+				"image": "/images/sally.jpg"
 			},
 			{
 				"name": "Dave Young",
@@ -57,7 +57,7 @@
 				"fraternity": "Greek Fraternity: Pi Kappa Alpha",
 				"extracurriculars": "Extracurriculars: Ultimate Frisbee",
 				"housing": "Lives: Off-Campus Apartments",
-				"image": "http://cdn.shopify.com/s/files/1/0213/2686/products/TO_SpiritSweater_grande.jpg?v=1366404617"
+				"image": "/images/dave.jpg"
 			},
 			{
 				"name": "Andrew Walker",
@@ -68,7 +68,7 @@
 				"fraternity": "Professional Fraternity: Theta Tau",
 				"extracurriculars": "Extracurriculars: Basketball",
 				"housing": "Lives: On-Campus Apartments",
-				"image": "http://cdn.shopify.com/s/files/1/0213/2686/products/TO_HashtagTriton_01_b8b17631-824c-494f-820a-47f568557fb8_grande.jpg?v=1402964645"
+				"image": "/images/andrew.jpg"
 			}
 	],
 	"ucsdstudents2":[
@@ -93,8 +93,8 @@
 			"major": "Psychology",
 			"major2": "Major",
 			"appointments": "Appointments",
-			"appointments2": "15 Completed",
-			"image": "http://cdn.shopify.com/s/files/1/0213/2686/products/TO_HashtagTriton_01_grande.jpg?v=1397167998"
+			"appointments2": "9 Completed",
+			"image": "/images/sally.jpg"
 		},
 		{
 			"name": "Dave Young",
@@ -105,8 +105,8 @@
 			"major2": "Major",
 			"location": "UC San Diego",
 			"appointments": "Appointments",
-			"appointments2": "15 Completed",
-			"image": "http://cdn.shopify.com/s/files/1/0213/2686/products/TO_SpiritSweater_grande.jpg?v=1366404617"
+			"appointments2": "5 Completed",
+			"image": "/images/dave.jpg"
 		},
 		{
 			"name": "Andrew Walker",
@@ -117,8 +117,8 @@
 			"location": "UC San Diego",
 			"major2": "Major",
 			"appointments": "Appointments",
-			"appointments2": "15 Completed",
-			"image": "http://cdn.shopify.com/s/files/1/0213/2686/products/TO_HashtagTriton_01_b8b17631-824c-494f-820a-47f568557fb8_grande.jpg?v=1402964645"
+			"appointments2": "8 Completed",
+			"image": "/images/andrew.jpg"
 		}
 ],
 				"homepage":[

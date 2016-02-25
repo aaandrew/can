@@ -309,10 +309,10 @@ nav ul{
 }
 
 .browse-background, .appointment-item{
-  width: 315px;
+  width: 310px;
   height: 150px;
   padding-top:10px;
-  padding-left: 10px;
+
   margin-bottom: 10px;
   margin-right: auto;
   margin-left: auto;
@@ -681,7 +681,7 @@ p.aboutus{
 
 .studentpage-img-name {
   margin-top: 20px;
-
+  position:relative;
   font-weight: bold;
   font-size: 22px;
 }
@@ -884,10 +884,12 @@ input[type="radio"]:checked.apt-radio ~ .rounded-select-button {
 .browse-ucsd-img{
   position: absolute;
   top: 175px;
+  width:100%;
+  height:auto;
 }
 
 .browse-college-text2{
-  font-size: 12px;
+  font-size: 11px;
 }
 .img-border{
   border: 2px solid white;
