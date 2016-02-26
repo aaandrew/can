@@ -30,8 +30,10 @@ $(document).ready(function(){
 
   // Scroll to div on homepage
   $('#home-tour, #login-account-link').click(function(){
+    // Subtract the navbarheight to scroll down properly
+    var navBarHeight = 50;
     $('html, body').animate({
-      scrollTop: $( $(this).attr('href') ).offset().top
+      scrollTop: $( $(this).attr('href') ).offset().top - navBarHeight
     }, 500);
     return false;
   });
