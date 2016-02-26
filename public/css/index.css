@@ -333,6 +333,10 @@ position:relative;
   font-size: 1.0em;
 }
 
+.appointment-text{
+  text-align:justify;
+  margin: 10px;
+}
 
 /*
 .browse-college-item{

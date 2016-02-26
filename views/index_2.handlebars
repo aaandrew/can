@@ -1,4 +1,28 @@
-{{> navbar}}
+<header>
+  <div class="nav-wrapper">
+    <div class="site-title"><a href="/">pierre</a></div>
+    <div id="nav-icon1" class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="main-navigation" role='navigation'>
+      <ul>
+        {{#if mentor}}
+          <li><a href="/edit/mentor">ACCOUNT</a></li>
+        {{else if mentee}}
+          <li><a href="/edit/mentee">ACCOUNT</a></li>
+        {{else}}
+          <li><a href="/login">LOGIN</a></li>
+        {{/if}}
+        <li><a href="/login">CREATE ACCOUNT</a></li>
+        <li><a href="/browse">BROWSE COLLEGES</a></li>
+        <li><a href="/dashboard">APPOINTMENTS</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
 <section>
   <section class="home-intro-container">
     <section class="home-intro-text">
@@ -6,10 +30,10 @@
       <div class="home-slogan-details">Understand different campus experiences from actual college students</div>
     </section>
     <div class="rounded-outline-button">
-      <a id="home-tour" href="#home-tutorial">Take a Tour</a>
+      <a id="home-tour" href=".home-start-title">Take a Tour</a>
     </div>
   </section>
-
+<!--
   <section id="home-tutorial" class="home-guide-container">
     <section class="home-guide-content">
       <div class="home-guide-item">
@@ -40,7 +64,7 @@
         </div>
       </div>
     </section>
-  </section>
+  </section> -->
 
   <section class="home-start-container">
     <section class="home-start-text">
@@ -59,5 +83,3 @@
   </section>
 
 </section>
-
-<a href="/index_2"> Redesign page </a>

@@ -11,6 +11,10 @@ module.exports = function (app, passport) {
 		res.render('index', data);
 	});
 
+	app.get('/index_2', function(req, res){
+		res.render('index_2', data);
+	});
+
 	app.get('/browse', function(req, res){
 		res.render('browse', browseData);
 	});
