@@ -5,24 +5,24 @@
 </div>
 </center>
 </br>
-    {{#each browse}}
-    <div class="browse-background">
-      <div class="browse-container">
-        <img src="{{image}}" height="125px" width="125px"/>
-        <div class="browse-college-info">
-        <span class="browse-college-name"><a href="{{link}}">{{name}}</a></span><br/>
-        <span class="browse-college-location">{{location}}</span><br/>
-        <section class="browse-college-text">
-          <div class="glyphicon glyphicon-th"></div>
-          <span>{{representatives}}</span><br/>
-          <div class="glyphicon glyphicon-th"></div>
-          <span>{{population}}</span><br/>
-          <div class="glyphicon glyphicon-th"></div>
-          <span>{{acceptance}}</span>
-        </section>
- <!--<a href="/ucsd_2"> ucsd 2 </a> -->
-      </div>
-    </div></div>
-    {{/each}}
-
+<section>
+  {{#each browse}}
+  <div class="browse-college-item">
+    <div class="browse-college-img">
+      <img src="{{image}}" />
+    </div>
+    <div class="browse-college-info">
+      <span class="browse-college-name"><a href="{{link}}">{{name}}</a></span><br/>
+      <span class="browse-college-location">{{location}}</span><br/>
+      <section class="browse-college-text">
+        <div class="glyphicon glyphicon-th"></div>
+        <span>{{representatives}}</span><br/>
+        <div class="glyphicon glyphicon-th"></div>
+        <span>{{population}}</span><br/>
+        <div class="glyphicon glyphicon-th"></div>
+        <span>{{acceptance}}</span>
+      </section>
+    </div>
   </div>
+  {{/each}}
+</section>
