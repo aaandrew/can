@@ -29,11 +29,11 @@ $(document).ready(function(){
   /******** index.handlebars code ********/
 
   // Scroll to div on homepage
-  $('#home-tour, #login-account-link').click(function(){
+  $('#home-tour').click(function(){
     // Subtract the navbarheight to scroll down properly
-    var navBarHeight = 50;
+    var navbarOffset = 70;
     $('html, body').animate({
-      scrollTop: $( $(this).attr('href') ).offset().top - navBarHeight
+      scrollTop: $( $(this).attr('href') ).offset().top - navbarOffset
     }, 500);
     return false;
   });
