@@ -2,25 +2,24 @@
 
 <section class="collegepage-container">
   <div class="college-main-img">
-    <img src="images/ucsd.jpg" />
+    <img src="{{main_img}}" />
   </div>
   <div class="college-back-background"></div>
   <div class="college-background-img">
-    <img src="images/ucsdbackground.png" />
+    <img src="{{background_img}}" />
   </div>
   <section class="collegepage-info-container">
     <div class="collegepage-headers">
-      <div class="collegepage-name">UC San Diego</div>
-      <div class="collegepage-location">La Jolla, CA</div>
+      <div class="collegepage-name">{{name}}</div>
+      <div class="collegepage-location">{{location}}</div>
     </div>
-    <div class="collegepage-description">The University of California, San Diego is a student-centered, research-focused, service-oriented public institution that provides opportunity for all. Recognized as one of the top 15 research universities worldwide, a culture of collaboration sparks discoveries that advance society and drive economic impact.
-    </div>
+    <div class="collegepage-description">{{description}}</div>
 
     <div class="collegepage-stats">
       <div class="glyphicon glyphicon-th"></div>
-      <span>23,000 undergrads</span></br/>
+      <span>{{undergrads}} undergrads</span></br/>
       <div class="glyphicon glyphicon-th"></div>
-      <span>33% acceptance</span>
+      <span>{{acceptance}} acceptance</span>
     </div>
   </section>
 
@@ -32,7 +31,7 @@
   </section>
 
   <section>
-    {{#each ucsdstudents2}}
+    {{#each mentors}}
     <div class="appointment-item">
       <div class="appointment-img">
         <img src="{{image}}" />

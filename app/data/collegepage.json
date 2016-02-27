@@ -1,0 +1,11 @@
+{
+  "ucsd": {
+    "main_img": "/images/ucsd.jpg",
+    "background_img": "/images/ucsdbackground.png",
+    "name": "UC San Diego",
+    "location": "La Jolla, CA",
+    "description": "The University of California, San Diego is a student-centered, research-focused, service-oriented public institution that provides opportunity for all. Recognized as one of the top 15 research universities worldwide, a culture of collaboration sparks discoveries that advance society and drive economic impact.",
+    "undergrads": "23,000",
+    "acceptance": "33%"
+  }
+}

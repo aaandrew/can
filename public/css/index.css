@@ -18,6 +18,7 @@ header{
   top: 0;
   height: 50px;
   width: 100%;
+  z-index: 9;
 
   background-color: #EB7E7E;
   color: white;
@@ -224,6 +225,8 @@ nav ul{
   flex-direction: column;
   align-items: center;
   width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home-guide-item {
@@ -307,28 +310,6 @@ nav ul{
   background:#7D7C7C;
   position: relative;
 }
-
-/*
-.browse-background{
-  width: 310px;
-  height: 150px;
-  padding-top:10px;
-
-  margin-bottom: 10px;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: white;
-}
-
-
-.browse-college-info{
-left: 135px;
-top:-130px;
-width:180px;
-word-wrap: break-word;
-position:relative;
-}
-*/
 
 /********************************
  browse.handlebars
@@ -856,29 +837,109 @@ input[type="radio"]:checked.apt-radio ~ .rounded-select-button {
   font-weight: inherit;
 }
 
-/* alternative redesign */
-.browse-ucsd-img{
-  position: absolute;
-  top: 175px;
-  width:100%;
-  height:auto;
+
+/********************************
+ collegepage.handlebars
+ ********************************/
+
+.collegepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.browse-college-text2{
-  font-size: 11px;
+.college-background-img {
+  width: 400px;
 }
-.img-border{
+
+.college-background-img > img {
+  height: 100%;
+  width: 100%;
+}
+
+.college-back-background {
+  position: absolute;
+  z-index: -2;
+  height: 400px;
+  width: 100%;
+  background: white;
+}
+
+.college-main-img {
+  position: absolute;
+  width: 184px;
+  left: 0;
+  right: 0;
+  margin-top: 160px;
+  margin-left: auto;
+  margin-right: auto;
   border: 2px solid white;
 }
 
-.college-info{
-  display: inline-block;
+.college-main-img > img {
+  height: 100%;
+  width: 100%;
 }
 
-.browse-items{
-  left:120px;
-  height:50px;
+.collegepage-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  background-color: white;
 }
-.mentors{
-  width: 175px;
+
+.collegepage-headers {
+  margin-top: 100px;
+  margin-bottom: 25px;
+}
+
+.collegepage-name {
+  font-size: 24px;
+}
+
+.collegepage-location {
+  font-size: 18px;
+}
+
+.collegepage-description {
+  width: 275px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-size: 12px;
+  line-height: 1.9;
+  text-align: justify;
+}
+
+.collegepage-stats {
+  margin-top: 25px;
+  padding-bottom: 45px;
+  font-size: 12px;
+  text-align: initial;
+}
+
+.collegepage-stats div:first-child {
+  margin-bottom: 20px;
+}
+
+.collegepage-mentors-container {
+  margin-top: 35px;
+}
+
+.collegepage-mentor-info {
+  width: 250px;
+  padding-bottom: 35px;
+  text-align: center;
+}
+
+.collegepage-mentor-title {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.collegepage-mentor-desc {
+  font-size: 14px;
 }

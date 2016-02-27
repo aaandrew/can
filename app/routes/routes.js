@@ -2,6 +2,7 @@ var data = require("../../data.json");
 var browseData = require("../data/browse.json");
 var dashboardData = require("../data/dashboard_data.json");
 var studentData = require("../data/student.json");
+var collegepageData = require("../data/collegepage.json");
 
 // Function used to merge json objects
 var extend = require('util')._extend;
@@ -17,6 +18,14 @@ module.exports = function (app, passport) {
 
 	app.get('/browse', function(req, res){
 		res.render('browse', browseData);
+	});
+
+	app.get('/collegepage', function(req, res){
+		// Get collegepage info from data
+		var college = collegepageData[req.query.name];
+		// Get mentors
+		college.mentors = data.ucsdstudents2;
+		res.render('collegepage', college);
 	});
 
 	app.get('/ucsd', function(req,res){

@@ -2,12 +2,12 @@
   "browse":[
     {
       "name": "UC San Diego",
-      "location": "La Jolla,CA",
+      "location": "La Jolla, CA",
       "representatives": "4 representatives",
       "population": "24,000 undergraduates",
       "acceptance": "33% acceptance",
       "image": "images/ucsd.jpg",
-      "link": "/ucsd_2"
+      "link": "/collegepage?name=ucsd"
     },
     {
       "name": "Stanford University",
