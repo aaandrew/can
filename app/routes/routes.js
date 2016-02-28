@@ -13,18 +13,22 @@ var extend = require('util')._extend;
 
 module.exports = function (app, passport) {
 	app.get('/', function(req, res){
-		res.render('index', data);
+		var userData = setMentorOrMentee(req);
+		res.render('index', extend(userData, data));
 	});
 
 	app.get('/index_2', function(req, res){
-		res.render('index_2', data);
+		var userData = setMentorOrMentee(req);
+		res.render('index_2', extend(userData, data));
 	});
 
 	app.get('/browse', function(req, res){
-		res.render('browse', browseData);
+		var userData = setMentorOrMentee(req);
+		res.render('browse', extend(userData, browseData));
 	});
 
 	app.get('/collegepage', function(req, res){
+		var userData = setMentorOrMentee(req);
 		// Get collegepage info from data
 		var college = collegepageData[req.query.name];
 		// Get mentors
@@ -38,8 +42,7 @@ module.exports = function (app, passport) {
 				college.mentors = college.mentors.concat(mentors);
 				// Set college name
 				college.college_name = generator.getCollegeName(college.mentors[0].college);
-				console.log("aaaaa", mentors);
-				res.render('collegepage', college);
+				res.render('collegepage', extend(userData, college));
 			}
 		});
 	});
@@ -67,19 +70,12 @@ module.exports = function (app, passport) {
 		res.render('harvard', data);
 	});
 
-	app.get('/appointments', function(req,res){
-		res.render('appointments', data);
-
-	});
-
 	app.get('/studentbio', function(req,res){
 		res.render('studentbio', data);
 	});
 
 	app.get('/dashboard', isLoggedIn, function(req, res){
-		var data = {};
-		if(req.user.mentor) data.mentor = true;
-		else if(req.user.mentee) data.mentee = true;
+		var data = setMentorOrMentee(req);
 		res.render('dashboard', extend(data, dashboardData));
 	});
 
@@ -88,12 +84,13 @@ module.exports = function (app, passport) {
 	});
 
 	app.get('/studentpage', function(req, res){
+		var userData = setMentorOrMentee(req);
 		Mentor.findMentor({_id: req.query.mentor})
 		.then(function(mentor){
 			// Set college full name
 			var data = mentor.toJSON();
 			data.college_name = generator.getCollegeName(data.college);
-			res.render('studentpage', data);
+			res.render('studentpage', extend(userData,data));
 		});
 	});
 
@@ -104,4 +101,12 @@ module.exports = function (app, passport) {
       res.redirect('/login');
     }
   }
+
+  function setMentorOrMentee(req){
+		var data = {};
+		if(req.user && req.user.mentor) data.mentor = true;
+		else if(req.user && req.user.mentee) data.mentee = true;
+		return data;
+  }
+
 };
