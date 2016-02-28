@@ -2,20 +2,32 @@
 <div class="studentpage-container">
   <section class="studentpage-img-container">
     <div class="studentpage-img">
-      <img src="/images/jesse.jpg">
+      <img src="{{image}}">
     </div>
-    <div class="studentpage-img-name">Jesse Qin</div>
-    <div class="studentpage-img-college">UC San Diego</div>
+    <div class="studentpage-img-name">{{name}}</div>
+    <div class="studentpage-img-college">{{college_name}}</div>
   </section>
   <section class="studentpage-bio">
     <div><b>Background</b></div>
+    {{#if background}}
+    <p>{{background}}</p>
+    {{else}}
     <p>Hi I’m Jesse! I’m a graduate student majoring in computer science at UCSD. I am currently a teaching assistant for an HCI course.</p>
+    {{/if}}
 
     <div><b>How I can help</b></div>
+    {{#if help}}
+    <p>{{help}}</p>
+    {{else}}
     <p>I am friends with many people from different majors and backgrounds. I can share some really cool stories from them, or I can share my own insights that I’ve learned from my four years at UCSD.</p>
+    {{/if}}
 
     <div><b>Interests</b></div>
+    {{#if interests}}
+    <p>{{interests}}</p>
+    {{else}}
     <p>I enjoy running biking and running 5k’s. On my spare time, I usually go eat hot pot!</p>
+    {{/if}}
   </section>
   <div class="studentpage-divider"></div>
   <section class="studentpage-question-container">

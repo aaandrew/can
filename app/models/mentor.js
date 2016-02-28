@@ -17,7 +17,13 @@ var MentorSchema = new mongoose.Schema({
   college: {
     type: String
   },
-  bio: {
+  background: {
+    type: String
+  },
+  help: {
+    type: String
+  },
+  interests: {
     type: String
   },
   year: {

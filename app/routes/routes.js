@@ -38,6 +38,7 @@ module.exports = function (app, passport) {
 				college.mentors = college.mentors.concat(mentors);
 				// Set college name
 				college.college_name = generator.getCollegeName(college.mentors[0].college);
+				console.log("aaaaa", mentors);
 				res.render('collegepage', college);
 			}
 		});
@@ -86,8 +87,14 @@ module.exports = function (app, passport) {
 		res.render('create_account_from_login');
 	});
 
-	app.get('/studentpage', isLoggedIn, function(req, res){
-		res.render('studentpage');
+	app.get('/studentpage', function(req, res){
+		Mentor.findMentor({_id: req.query.mentor})
+		.then(function(mentor){
+			// Set college full name
+			var data = mentor.toJSON();
+			data.college_name = generator.getCollegeName(data.college);
+			res.render('studentpage', data);
+		});
 	});
 
 	function isLoggedIn(req, res, next) {
