@@ -12,3 +12,13 @@ exports.view = function (app, passport) {
   }
 
 };
+  
+//redirect to student page when appointment is created
+app.post('/studentPage',
+    passport.authenticate('local-signup', {
+      successRedirect: '/studentPage',
+      failureRedirect: '/login',
+      failureFlash: true
+    }));
+
+
