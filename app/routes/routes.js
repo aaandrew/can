@@ -71,7 +71,7 @@ module.exports = function (app, passport) {
 		res.render('create_account_from_login');
 	});
 
-	app.get('/studentpage', function(req, res){
+	app.get('/studentpage', isLoggedIn, function(req, res){
 		res.render('studentpage');
 	});
 
