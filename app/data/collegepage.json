@@ -5,7 +5,26 @@
     "name": "UC San Diego",
     "location": "La Jolla, CA",
     "description": "The University of California, San Diego is a student-centered, research-focused, service-oriented public institution that provides opportunity for all. Recognized as one of the top 15 research universities worldwide, a culture of collaboration sparks discoveries that advance society and drive economic impact.",
-    "undergrads": "23,000",
+    "undergrads": "24,000",
     "acceptance": "33%"
+  },
+  "stanford": {
+    "main_img": "https://res.cloudinary.com/crowdpac/image/upload/c_fill,g_face,h_420,w_470/v1/Universities/Stanford-University",
+    "background_img": "/images/stanfordbackground.png",
+    "name": "Stanford University",
+    "location": "Stanford, CA",
+    "description": "Stanford University, located between San Francisco and San Jose in the heart of California's Silicon Valley, is one of the world's leading teaching and research universities. Since its opening in 1891, Stanford has been dedicated to finding solutions to big challenges and to preparing students for leadership in a complex world.",
+    "undergrads": "6,980",
+    "acceptance": "5.04%"
+  },
+  "harvard": {
+    "main_img": "images/harvard.jpg",
+    "background_img": "/images/harvardbackground.png",
+    "name": "Harvard University",
+    "location": "Cambridge, MA",
+    "description": "Harvard University is devoted to excellence in teaching, learning, and research, and to developing leaders in many disciplines who make a difference globally. The University, which is based in Cambridge and Boston, Massachusetts, has an enrollment of over 20,000 degree candidates, including undergraduate, graduate, and professional students. Harvard has more than 360,000 alumni around the world.",
+    "undergrads": "6,980",
+    "acceptance": "5.3"
   }
+
 }
