@@ -1,27 +1,30 @@
 {
   "browse":[
     {
+      "short_name": "ucsd",
       "name": "UC San Diego",
       "location": "La Jolla, CA",
-      "representatives": "4 representatives",
+      "representatives": "4",
       "population": "24,000 undergraduates",
       "acceptance": "33% acceptance",
       "image": "images/ucsd.jpg",
       "link": "/collegepage?name=ucsd"
     },
     {
+      "short_name": "stanford",
       "name": "Stanford University",
       "location": "Stanford, CA",
-      "representatives": "3 representatives",
+      "representatives": "3",
       "population": "6,980 undergraduates",
       "acceptance": "5.04% acceptance",
       "image":"https://res.cloudinary.com/crowdpac/image/upload/c_fill,g_face,h_420,w_470/v1/Universities/Stanford-University",
       "link": "/collegepage?name=stanford"
     },
     {
+    "short_name": "harvard",
     "name": "Harvard University",
     "location": "Cambridge, Massachusetts",
-    "representatives": "3 representatives",
+    "representatives": "3",
     "population": "6,700 undergraduates",
     "acceptance": "5.3% acceptance",
     "image": "http://static.squarespace.com/static/54372714e4b02e62e3f5cb96/t/54ae32b8e4b07588aa08d126/1420702392679/Harvard.jpg",

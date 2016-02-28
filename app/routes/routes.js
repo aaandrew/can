@@ -24,7 +24,30 @@ module.exports = function (app, passport) {
 
 	app.get('/browse', function(req, res){
 		var userData = setMentorOrMentee(req);
-		res.render('browse', extend(userData, browseData));
+
+		// This code just calculates the number of mentors for each
+		// college in the database and maps them to the browseData
+		var reps = {
+			'ucsd': 0,
+			'stanford': 0,
+			'harvard': 0
+		};
+		Mentor.find({}, function(err, mentors){
+			if(!err) console.log("Browse: Error finding mentors: ", err);
+
+			// Calculate all representatives
+			for(var i=0; i<mentors.length; i++){
+				if(mentors[i].college)
+					reps[mentors[i].college] += 1;
+			}
+
+			// Inject that to browseData
+			var colleges = browseData['browse'];
+			for(var i=0; i<colleges.length; i++){
+				colleges[i].representatives = reps[colleges[i].short_name];
+			}
+			res.render('browse', extend(userData, browseData));
+		});
 	});
 
 	app.get('/collegepage', function(req, res){
