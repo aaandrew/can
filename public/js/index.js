@@ -68,7 +68,7 @@ $(document).ready(function(){
 
   // Listener to change confirmation time text from select
   $studentPageSelect.change(function(){
-    var newConfirmTime =  $(this).val() + " from " + $studentPageRadioButtons.val();
+    var newConfirmTime =  $(this).val() + " from " + $('input[name=radios]:checked').val();
     $confirmationText.text(newConfirmTime);
   });
 
