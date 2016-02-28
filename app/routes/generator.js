@@ -9,3 +9,15 @@ exports.generateImage = function () {
 
   return images[Math.floor(Math.random()*images.length)];
 };
+
+// Hardcoded function to generate college names
+exports.getCollegeName = function(shortname){
+  if(shortname == 'ucsd'){
+    return 'UC San Diego';
+  }else if(shortname == 'stanford'){
+    return 'Stanford';
+  }else if(shortname == 'harvard'){
+    return 'Harvard'
+  }
+  return 'UC San Diego';
+};

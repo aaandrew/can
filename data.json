@@ -79,9 +79,8 @@
 			"year": "1st Year Master's Student",
 			"major": "Computer Science",
 			"major2": "Major",
-			"location": "UC San Diego",
-			"appointments": "Appointments",
-			"appointments2": "15 Completed",
+			"college": "UC San Diego",
+			"appointments": "15",
 			"image": "/images/jesse.jpg"
 		},
 		{
@@ -89,11 +88,10 @@
 			"href": "/studentpage",
 			"class": "Class",
 			"year": "3rd Year Undergraduate",
-			"location": "UC San Diego",
+			"college": "UC San Diego",
 			"major": "Psychology",
 			"major2": "Major",
-			"appointments": "Appointments",
-			"appointments2": "9 Completed",
+			"appointments": "9",
 			"image": "/images/sally.jpg"
 		},
 		{
@@ -103,9 +101,8 @@
 			"year": "2nd Year Undergraduate",
 			"major": "Biology",
 			"major2": "Major",
-			"location": "UC San Diego",
-			"appointments": "Appointments",
-			"appointments2": "5 Completed",
+			"college": "UC San Diego",
+			"appointments": "5",
 			"image": "/images/dave.jpg"
 		},
 		{
@@ -114,10 +111,9 @@
 			"class": "Class",
 			"year": "4th Year Undergraduate",
 			"major": "Computer Science",
-			"location": "UC San Diego",
+			"college": "UC San Diego",
 			"major2": "Major",
-			"appointments": "Appointments",
-			"appointments2": "8 Completed",
+			"appointments": "8",
 			"image": "/images/andrew.jpg"
 		}
 ],

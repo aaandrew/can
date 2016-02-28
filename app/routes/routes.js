@@ -6,6 +6,8 @@ var collegepageData = require("../data/collegepage.json");
 
 var Mentor = require('../models/mentor');
 
+var generator = require('./generator');
+
 // Function used to merge json objects
 var extend = require('util')._extend;
 
@@ -34,6 +36,8 @@ module.exports = function (app, passport) {
 				res.end();
 			}else{
 				college.mentors = college.mentors.concat(mentors);
+				// Set college name
+				college.college_name = generator.getCollegeName(college.mentors[0].college);
 				res.render('collegepage', college);
 			}
 		});
