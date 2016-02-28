@@ -4,6 +4,8 @@ var User = require('../models/user');
 var Mentor = require('../models/mentor');
 var Mentee = require('../models/mentee');
 
+var generator = require('./generator');
+
 module.exports = function(passport) {
 
   // used to serialize the user for the session
@@ -76,6 +78,7 @@ module.exports = function(passport) {
           if(req.body.isMentor === "true"){
             // Save mentor
             var mentor =  new Mentor(userData);
+            mentor.image = generator.generateImage();
             mentor.save(function(err){
               if(err) console.error("Error saving mentor", err);
             });
@@ -84,6 +87,7 @@ module.exports = function(passport) {
           }else{
             // Save mentee
             var mentee =  new Mentee(userData);
+            mentee.image = generator.generateImage();
             mentee.save(function(err){
               if(err) console.error("Error saving mentee", err);
             });
