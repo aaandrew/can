@@ -11,8 +11,8 @@ var appointmentSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  User: {
-    type: mongoose.Schema.Types.ObjectId, ref: 'User'
+  mentee: {
+    type: mongoose.Schema.Types.ObjectId, ref: 'Mentee'
     required: true
   },
     mentor: {
@@ -21,4 +21,4 @@ var appointmentSchema = mongoose.Schema({
 });
 
 
-module.exports = mongoose.model('User', appointmentSchema);
+module.exports = mongoose.model('Mentee', appointmentSchema);
