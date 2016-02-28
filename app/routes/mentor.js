@@ -32,6 +32,9 @@ module.exports = function (app, passport) {
       mentor.college = req.body.college;
       mentor.major = req.body.major;
       mentor.year = req.body.year;
+      mentor.background = req.body.background;
+      mentor.help = req.body.help;
+      mentor.interests = req.body.interests;
       mentor.save();
       res.redirect('/dashboard');
       res.end();
