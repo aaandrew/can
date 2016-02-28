@@ -4,6 +4,8 @@ var dashboardData = require("../data/dashboard_data.json");
 var studentData = require("../data/student.json");
 var collegepageData = require("../data/collegepage.json");
 
+var Mentor = require('../models/mentor');
+
 // Function used to merge json objects
 var extend = require('util')._extend;
 
@@ -25,7 +27,16 @@ module.exports = function (app, passport) {
 		var college = collegepageData[req.query.name];
 		// Get mentors
 		college.mentors = data.ucsdstudents2;
-		res.render('collegepage', college);
+
+		Mentor.find({college: req.query.name}, function(err, mentors){
+			if(err){
+				res.redirect('/');
+				res.end();
+			}else{
+				college.mentors = college.mentors.concat(mentors);
+				res.render('collegepage', college);
+			}
+		});
 	});
 
 	app.get('/ucsd', function(req,res){

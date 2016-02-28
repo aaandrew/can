@@ -19,6 +19,19 @@ var MentorSchema = new mongoose.Schema({
   },
   bio: {
     type: String
+  },
+  year: {
+    type: String
+  },
+  major: {
+    type: String
+  },
+  image: {
+    type: String
+  },
+  appointments: {
+    type: Number,
+    default: 0
   }
 });
 

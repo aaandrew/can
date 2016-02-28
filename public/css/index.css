@@ -950,3 +950,16 @@ input[type="radio"]:checked.apt-radio ~ .rounded-select-button {
 .collegepage-mentor-desc {
   font-size: 14px;
 }
+
+/********************************
+ edit_mentor.handlebars
+ ********************************/
+
+.form-input {
+  width: 90%;
+  max-width: 300px;
+}
+
+
+
+
