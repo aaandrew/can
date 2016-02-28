@@ -1,3 +1,5 @@
+var Mentee = require('../models/mentee');
+
 module.exports = function (app, passport) {
   app.get('/signup/mentee', function(req, res){
     res.render('create_mentee_login', {message: req.flash('signup-message')});
@@ -14,12 +16,23 @@ module.exports = function (app, passport) {
   // Loads page for editing mentee account
   // Redirects to login page if user is not logged in
   app.get('/edit/mentee', isMentee, function(req, res){
-    // Grab user from session
-    var user = {
-      name: req.user.name,
-      email: req.user.email
-    };
-    res.render('edit_mentee', user);
+    Mentee.findMentee({_id: req.user.mentee})
+    .then(function(mentee){
+      res.render('edit_mentee', mentee.toJSON());
+    });
+  });
+
+  app.post('/edit/mentee', isMentee, function(req, res){
+    Mentee.findMentee({_id: req.user.mentee})
+    .then(function(mentee){
+       // Update fields
+      mentee.name = req.body.name;
+      mentee.location = req.body.location;
+      mentee.interests = req.body.interests;
+      mentee.save();
+      res.redirect('/dashboard');
+      res.end();
+    });
   });
 
   // Middleware to check if user is logged in

@@ -3,17 +3,21 @@
 <div class="title">
   Edit Mentee Account
 </div>
-<div class="editmentee">
-  <h6 class="formh6"> NAME </h6>
-  <input type="text" name="name" placeholder="Enter your full name" value={{name}}><br>
-  <h6 class="formh6"> EMAIL </h6>
-  <div>{{email}}</div>
-  <h6 class="formh6"> LOCATION </h6>
-  <input type="text" name="location" placeholder="Enter your city and state"><br>
-  <h6 class="formh6"> ABOUT YOU </h6>
-  <textarea  name="text" maxlength="1000" cols="25" rows="10" placeholder="Tell us about yourself! What do you want to learn here? What are your interests?"></textarea>
-  <br>
-</div></br>
-<a href="/" class="roundbutton">Save Changes</a>
+<form action="/edit/mentee" method="post">
+  <div class="editmentee">
+    <h6 class="formh6" maxlength="25"> NAME </h6>
+    <input type="text" name="name" placeholder="Enter your full name" value="{{name}}" required><br>
+    <h6 class="formh6">EMAIL</h6>
+    <input class="form-input form-control" name="email" type="text" value="{{email}}" disabled><br>
+    <h6 class="formh6">LOCATION</h6>
+    <input type="text" name="location" placeholder="Enter your city and state" maxlength="25" value="{{location}}" required/><br>
+    <h6 class="formh6"> ABOUT YOU </h6>
+    <textarea  name="interests" maxlength="1000" cols="25" rows="10" placeholder="Tell us about yourself! What do you want to learn here? What are your interests?" required>{{interests}}</textarea>
+    <br>
+  </div></br>
+  <div class="create-account-button">
+    <input class="roundbutton" type="submit" value="Save" />
+  </div>
+</form>
 
 </center>

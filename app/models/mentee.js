@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var Q = require('q');
 
 var MenteeSchema = new mongoose.Schema({
   name: {
@@ -16,9 +17,25 @@ var MenteeSchema = new mongoose.Schema({
   location: {
     type: String
   },
-  bio: {
+  interests: {
     type: String
   }
 });
+
+// Finds and returns mentor object
+MenteeSchema.statics.findMentee = function(data) {
+  var deferred = Q.defer();
+
+  this.findOne(data, function(err, mentee){
+    if(err || !mentee){
+      console.error("Login: Unable to find mentee", err);
+      deferred.reject(err);
+    }else{
+      deferred.resolve(mentee);
+    }
+  });
+
+  return deferred.promise;
+};
 
 module.exports = mongoose.model('Mentee', MenteeSchema);
