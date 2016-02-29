@@ -1054,3 +1054,27 @@ textarea.form-input {
   align-items: center;
   margin-top: 30px;
 }
+
+/********************************
+ done.handlebars
+ ********************************/
+
+.confirmation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 92vh;
+  background: white;
+}
+
+.confirmation-container > section {
+  margin-top: 40px;
+}
+
+.confirmation-time {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
