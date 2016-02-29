@@ -110,6 +110,7 @@ module.exports = function (app, passport) {
 		res.render('login_2');
 	});
 
+
 	app.get('/studentpage', function(req, res){
 		var userData = setMentorOrMentee(req);
 		Mentor.findMentor({_id: req.query.mentor})
