@@ -560,14 +560,6 @@ div.glyphicon {
   font-weight: bold;
 }
 
-.roundbutton{
-    color: #FFFFFF;
-    background: #ED7F82;
-    border: 5px;
-    border-radius: 25px;
-    padding: 10px;
-}
-
 .roundbutton2{
     color: #FFFFFF;
     background: #ED7F82;
@@ -955,11 +947,68 @@ input[type="radio"]:checked.apt-radio ~ .rounded-select-button {
  edit_mentor.handlebars
  ********************************/
 
+ .edit-mentor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+ }
+
 .form-input {
-  width: 90%;
-  max-width: 300px;
+  height: 44px;
+  width: 100%;
+  padding: 0 8px;
+  font-size: 16px;
+  border: 1px solid #d9d9d9;
+  color: #333;
 }
 
+.form-input-label {
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #EB7E7E;
+}
+
+.form-input-container {
+  width: 70%;
+  max-width: 350px;
+  margin-bottom: 30px;
+}
+
+select.select-college {
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 100%;
+
+  padding: 10px;
+
+  background: url("../images/nav-arrow.png") no-repeat white;
+  background-position: 96% 55%;
+  background-size: 10px;
+
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
+
+  font-size: 16px;
+}
+
+textarea.form-input {
+  font-size: 14px;
+  height: 200px;
+  padding: 7px 10px;
+}
+
+.form-input-button {
+  max-width: 250px;
+  width: 50%;
+  margin-top: 10px;
+}
+
+.form-input-button > input {
+  width: 100%;
+}
 
 
 
