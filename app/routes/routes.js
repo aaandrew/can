@@ -106,6 +106,10 @@ module.exports = function (app, passport) {
 		res.render('create_account_from_login');
 	});
 
+	app.get('/login_2', function(req, res){
+		res.render('login_2');
+	});
+
 	app.get('/studentpage', function(req, res){
 		var userData = setMentorOrMentee(req);
 		Mentor.findMentor({_id: req.query.mentor})
