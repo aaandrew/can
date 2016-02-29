@@ -1010,5 +1010,16 @@ textarea.form-input {
   width: 100%;
 }
 
+/********************************
+ edit_mentee.handlebars
+ ********************************/
+
+ .edit-mentee-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+ }
+
 
 

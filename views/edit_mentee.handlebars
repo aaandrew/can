@@ -1,26 +1,36 @@
 {{> navbar}}
 <center>
-<div class="title">
-  Edit Mentee Account
-</div>
-<div>
-  <a href="/logout">Logout</a>
-</div>
-<form action="/edit/mentee" method="post">
-  <div class="editmentee">
-    <h6 class="formh6" maxlength="25"> NAME </h6>
-    <input type="text" name="name" placeholder="Enter your full name" value="{{name}}" required><br>
-    <h6 class="formh6">EMAIL</h6>
-    <input class="form-input form-control" name="email" type="text" value="{{email}}" disabled><br>
-    <h6 class="formh6">LOCATION</h6>
-    <input type="text" name="location" placeholder="Enter your city and state" maxlength="25" value="{{location}}" required/><br>
-    <h6 class="formh6"> ABOUT YOU </h6>
-    <textarea  name="interests" maxlength="1000" cols="25" rows="10" placeholder="Tell us about yourself! What do you want to learn here? What are your interests?" required>{{interests}}</textarea>
-    <br>
-  </div></br>
-  <div class="create-account-button">
-    <input class="roundbutton" type="submit" value="Save" />
+  <div class="title">
+    Edit Mentee Account
   </div>
-</form>
-
 </center>
+
+<form action="/edit/mentee" method="post">
+
+  <section class="edit-mentee-container">
+
+    <div class="form-input-container">
+      <div class="form-input-label">NAME</div>
+      <input type="text" class="form-input" name="name" placeholder="Enter your full name" value="{{name}}" required>
+    </div>
+
+    <div class="form-input-container">
+      <div class="form-input-label">EMAIL</div>
+      <input class="form-input form-control" name="email" type="text" value="{{email}}" disabled />
+    </div>
+
+    <div class="form-input-container">
+      <div class="form-input-label">LOCATION</div>
+      <input class="form-input" type="text" name="location" placeholder="Enter your city and state" maxlength="25" value="{{location}}" required/>
+    </div>
+
+    <div class="form-input-container">
+      <div class="form-input-label">ABOUT YOU</div>
+      <textarea class="form-input" name="interests" maxlength="1000" cols="25" rows="10" placeholder="Tell us about yourself! What do you want to learn here? What are your interests?" required>{{interests}}</textarea>
+    </div>
+
+    <div class="form-input-button">
+      <input class="rounded-button" type="submit" value="Save" />
+    </div>
+  </section>
+</form>
