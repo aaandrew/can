@@ -1021,5 +1021,36 @@ textarea.form-input {
   margin-top: 30px;
  }
 
+/********************************
+ login.handlebars
+ ********************************/
 
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
 
+/* Grabs password field */
+.login-container div:nth-child(2) {
+  margin-bottom: 0px;
+}
+
+.login-account-container {
+  width: 70%;
+  max-width: 350px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+/********************************
+ create_mentee_login.handlebars,  create_mentor_login.handlebars
+ ********************************/
+
+.create-login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
