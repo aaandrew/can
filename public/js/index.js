@@ -73,13 +73,16 @@ $(document).ready(function(){
   });
 
 
-$('.home-start-button rounded-button').click(function(){
-  	// your code here
-  	ga("send", "event", "createaccount", "click");
-  });
 
-$('#login-account-link').click(function(){
+  $('.home-start-button rounded-button').click(function(){
     	// your code here
     	ga("send", "event", "createaccount", "click");
     });
+
+  $('#login-account-link').click(function(){
+      	// your code here
+      	ga("send", "event", "createaccount", "click");
+      });
+
+
 });
