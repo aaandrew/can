@@ -74,15 +74,21 @@ $(document).ready(function(){
 
 
 
-  $('.home-start-button rounded-button').click(function(){
+  $('.click-record').click(function(){
     	// your code here
     	ga("send", "event", "createaccount", "click");
+      console.log('original');
     });
 
   $('#login-account-link').click(function(){
       	// your code here
-      	ga("send", "event", "createaccount", "click");
+      	ga("send", "event", "createaccount2", "click");
+        console.log('1st');
       });
-
+  $('.createaccount2_2nd').click(function(){
+          	// your code here
+        ga("send", "event", "createaccount2_2nd", "click");
+        console.log('2nd');
+          });
 
 });
