@@ -5,34 +5,46 @@
 </center>
 </br>
 <section>
-  {{#each appointments}}
-  <div class="appointment-item">
-    <a href="{{link}}">
-      <div class="appointment-img">
-        <img src="{{image}}" />
+
+  {{#if appointments}}
+  
+    {{#each appointments}}
+    <div class="appointment-item">
+      <a href="{{link}}">
+        <div class="appointment-img">
+          <img src="{{image}}" />
+        </div>
+      </a>
+      <div class="appointment-info">
+        <span class="appointment-student-name"><a href="{{link}}">{{name}}</a></span><br/>
+        <span class="appointment-student-college">{{college}}</span><br/>
+        <section class="appointment-text">
+          <div class="glyphicon glyphicon-th"></div>
+          <span>
+            <strong>Day</strong>
+            <span>{{day}}</span>
+          </span><br/>
+          <div class="glyphicon glyphicon-th"></div>
+          <span>
+            <strong>Time</strong>
+            <span>{{time}}</span>
+          </span><br/>
+          <div class="glyphicon glyphicon-th"></div>
+          <span>
+            <strong>Hangout</strong>
+            <span><a href="{{hangout}}"> Join the conversation!</a></span>
+            </span>
+        </section>
       </div>
-    </a>
-    <div class="appointment-info">
-      <span class="appointment-student-name"><a href="{{link}}">{{name}}</a></span><br/>
-      <span class="appointment-student-college">{{college}}</span><br/>
-      <section class="appointment-text">
-        <div class="glyphicon glyphicon-th"></div>
-        <span>
-          <strong>Day</strong>
-          <span>{{day}}</span>
-        </span><br/>
-        <div class="glyphicon glyphicon-th"></div>
-        <span>
-          <strong>Time</strong>
-          <span>{{time}}</span>
-        </span><br/>
-        <div class="glyphicon glyphicon-th"></div>
-        <span>
-          <strong>Hangout</strong>
-          <span><a href="{{hangout}}"> Join the conversation!</a></span>
-          </span>
-      </section>
     </div>
+    {{/each}}
+  
+  {{else}}
+  <div class="flex-message">
+    <img src="https://i.imgur.com/wOG4eRL.png" />
+    <div class="no-apts-message">Looks like there are no appointments :(</div>
+    <a class="no-apts-message" href="/browse">Let's find a mentor!</a>
   </div>
-  {{/each}}
+  {{/if}}
+
 </section>

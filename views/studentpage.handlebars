@@ -1,4 +1,11 @@
 {{> navbar}}
+
+{{#if message}}
+<div class="alert alert-danger">{{message}}</div>
+{{/if}}
+
+<form action="/studentpage" method="post">
+<input name="mentor" value="{{_id}}" hidden>
 <div class="studentpage-container">
   <section class="studentpage-img-container">
     <div class="studentpage-img">
@@ -42,7 +49,7 @@
     <section class="studentpage-appointments">
 
       <div>
-        <select class="studentpage-apt-select">
+        <select name="day" class="studentpage-apt-select">
           <option value="monday">Monday</option>
           <option value="tuesday">Tuesday</option>
           <option value="wednesday">Wednesday</option>
@@ -114,10 +121,13 @@
 
     <section class="studentpage-apt-confirm-container">
       <div class="studentpage-apt-confirm-title">Confirmation</div>
-      <div class="studentpage-apt-confirm-details">You and your mentor will receive a google hangout link at</div>
+      <div class="studentpage-apt-confirm-details">You and your mentor will receive a Google Hangout link at</div>
       <div class="studentpage-apt-confirm-time">Please select an appointment</div>
-      <a href="/done"><input type="submit" class="rounded-button" value="Confirm appointment"></a>
+      <input type="submit" class="rounded-button" value="Confirm appointment" />
     </section>
 
   </section>
+
 </div>
+</form>
+

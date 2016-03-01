@@ -20,12 +20,9 @@ module.exports = function (app, passport) {
   // Loads page for editing mentee account
   // Redirects to login page if user is not logged in
   app.get('/edit/mentee', isMentee, function(req, res){
-    console.log("heeere")
     var userData = helpers.setMentorOrMentee(req);
-    console.log("ussss", userData)
     Mentee.findMentee({_id: req.user.mentee})
     .then(function(mentee){
-      console.log("sommeeee")
       res.render('edit_mentee', extend(userData, mentee.toJSON()));
     });
   });

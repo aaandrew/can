@@ -1,3 +1,6 @@
+var querystring = require('querystring');
+var moment = require('moment');
+
 var data = require("../../data.json");
 var browseData = require("../data/browse.json");
 var dashboardData = require("../data/dashboard_data.json");
@@ -5,6 +8,7 @@ var studentData = require("../data/student.json");
 var collegepageData = require("../data/collegepage.json");
 
 var Mentor = require('../models/mentor');
+var Appointment = require('../models/appointment');
 
 var generator = require('./generator');
 
@@ -82,7 +86,7 @@ module.exports = function (app, passport) {
 	});
 
 	app.get('/done', function(req, res){
-		res.render('done', data);
+		res.render('done', req.query);
 	});
 
 	app.get('/stanford', function(req, res){
@@ -99,7 +103,24 @@ module.exports = function (app, passport) {
 
 	app.get('/dashboard', isLoggedIn, function(req, res){
 		var data = setMentorOrMentee(req);
-		res.render('dashboard', extend(data, dashboardData));
+		if(req.user && req.user.mentor){
+			// Load appointments for mentors
+			Appointment.findAppointments({mentor: req.user.mentor})
+			.then(function(appointments){
+				var apts = { appointments: mapMentorAppointments(appointments) };
+				res.render('dashboard', extend(data, apts));
+			});
+		}else if(req.user && req.user.mentee){
+			// Load appointments for mentees
+			Appointment.findAppointments({mentee: req.user.mentee})
+			.then(function(appointments){
+				var apts = { appointments: mapMenteeAppointments(appointments) };
+				res.render('dashboard', extend(data, apts));
+			});
+		}else{
+			// Redirect home if something weird happens
+			res.redirect('/');
+		}
 	});
 
 	app.get('/create_account_from_login', function(req, res){
@@ -111,19 +132,45 @@ module.exports = function (app, passport) {
 	});
 
 
-	app.get('/studentpage', function(req, res){
+	app.get('/studentpage', isLoggedIn, function(req, res){
 		var userData = setMentorOrMentee(req);
+		userData.message = req.flash('studentpage-message');
 		Mentor.findMentor({_id: req.query.mentor})
 		.then(function(mentor){
 			// Set college full name
 			var data = mentor.toJSON();
 			data.college_name = generator.getCollegeName(data.college);
-			res.render('studentpage', extend(userData,data));
+			res.render('studentpage', extend(userData, data));
 		});
 	});
 
-	app.post('/studentpage', function(req, res){
-		console.log("yas", req.body);
+	app.post('/studentpage', isLoggedIn, function(req, res){
+		
+		// Check if user is a mentor, if so redirect them back
+		if(req.user && !req.user.mentee) {
+			req.flash('studentpage-message', 'You must be logged in as a Mentee to create an appointment');
+			res.redirect('back');
+			return;
+		}
+
+		// Create appointment
+		var appointment = new Appointment();
+		appointment.date = req.body.day;
+		appointment.time = req.body.radios;
+		appointment.mentor = req.body.mentor;
+		appointment.mentee = req.user.mentee;
+		appointment.save(function(err){
+			if(err) console.log("Error saving appointment: ", err);
+		});
+
+		var doneData = {
+			date: req.body.day,
+			time: req.body.radios
+		};
+
+		// redirect to done page with query parameters
+		res.redirect('/done?' + querystring.stringify(doneData));
+		res.end();
 	});
 
   function isLoggedIn(req, res, next) {
@@ -140,5 +187,50 @@ module.exports = function (app, passport) {
     else if(req.user && req.user.mentee) data.mentee = true;
     return data;
   }
+
+  // Returns new array of appointments to be properly displayed in handlebars
+  // For mentors
+	function mapMentorAppointments (appointments) {
+		var result = [];
+		var curYear = moment().year();
+
+		for(var i=0; i<appointments.length; i++){
+			var apt = {};
+			// Set date
+			var dateString = moment(appointments[i].date + "/" + curYear, "MM-DD-YYYY");
+			apt.day = moment(dateString).format("dddd, MMMM Do YYYY");
+			apt.time = appointments[i].time;
+			apt.name = appointments[i].mentee.name;
+			apt.college = appointments[i].mentee.location;
+			apt.image = appointments[i].mentee.image;
+			apt.hangout = appointments[i].hangout;
+			result.push(apt);
+		}
+
+		return result;
+	}
+
+	// Returns new array of appointments to be properly displayed in handlebars
+	// For mentees
+	function mapMenteeAppointments (appointments) {
+		var result = [];
+		var curYear = moment().year();
+
+		for(var i=0; i<appointments.length; i++){
+			var apt = {};
+			// Set date
+			var dateString = moment(appointments[i].date + "/" + curYear, "MM-DD-YYYY");
+			apt.day = moment(dateString).format("dddd, MMMM Do YYYY");
+			apt.time = appointments[i].time;
+			apt.name = appointments[i].mentor.name;
+			apt.college = generator.getCollegeName(appointments[i].mentor.college);
+			apt.image = appointments[i].mentor.image;
+			apt.hangout = appointments[i].hangout;
+			apt.link = "/studentpage?" + querystring.stringify({mentor: appointments[i].mentor._id + ""});
+			result.push(apt);
+		}
+
+		return result;
+	}
 
 };

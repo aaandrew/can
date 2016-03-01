@@ -522,6 +522,18 @@ div.glyphicon {
   position: inherit;
 }
 
+.flex-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.no-apts-message {
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 18px;
+}
+
 /********************************
  create_account_mentee.handlebars
  ********************************/
