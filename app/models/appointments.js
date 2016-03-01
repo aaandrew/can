@@ -15,7 +15,7 @@ var appointmentSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId, ref: 'Mentee'
     required: true
   },
-    mentor: {
+  mentor: {
     type: mongoose.Schema.Types.ObjectId, ref: 'Mentor'
   }
 });

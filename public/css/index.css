@@ -752,7 +752,10 @@ div.studentpage-divider {
   apperance: none;
   display: inline-block;
 
-  padding: 11px 11px 11px;
+  height: 37px;
+  width: 97px;
+
+  padding: 11px 0px;
 
   background: 0 0;
   border: 2px solid #EB7E7E;
@@ -783,6 +786,13 @@ input[type="radio"]:checked.apt-radio ~ .rounded-select-button {
   color: white;
 }
 
+.flex-row > div {
+  margin-right: 10px;
+}
+
+.flex-row > div:last-child {
+  margin-right: 0px;
+}
 
 .studentpage-apt-confirm-container {
   display: flex;

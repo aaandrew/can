@@ -122,6 +122,10 @@ module.exports = function (app, passport) {
 		});
 	});
 
+	app.post('/studentpage', function(req, res){
+		console.log("yas", req.body);
+	});
+
   function isLoggedIn(req, res, next) {
     if (req.user) {
       next();
