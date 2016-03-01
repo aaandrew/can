@@ -81,7 +81,7 @@ $(document).ready(function(){
 
   $('#login-account-link').click(function(){
       	// your code here
-      	ga("send", "event", "createaccount", "click");
+      	ga("send", "event", "createaccount2", "click");
       });
 
 
