@@ -326,7 +326,7 @@ nav ul{
 
 .browse-college-img {
   float: left;
-  height: inherit;
+  height: 100%;
   width: 145px;
 }
 
@@ -362,6 +362,11 @@ nav ul{
 
 .browse-college-text > span {
   margin-left: 2px;
+}
+
+a.card-anchor, a.card-anchor:hover {
+  text-decoration: none;
+  color: inherit;
 }
 
 /********************************
@@ -471,7 +476,7 @@ p.aboutus{
 
 .appointment-img {
   float: left;
-  height: inherit;
+  height: 100%;
   width: 145px;
 }
 
@@ -1076,9 +1081,4 @@ textarea.form-input {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 25px;
-}
-
-
-.progress-bar{
-  background-color: #EB7E7E;
 }

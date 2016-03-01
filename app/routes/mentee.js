@@ -1,5 +1,9 @@
 var Mentee = require('../models/mentee');
 
+var helpers = require('./helpers');
+
+var extend = require('util')._extend;
+
 module.exports = function (app, passport) {
   app.get('/signup/mentee', function(req, res){
     res.render('create_mentee_login', {message: req.flash('signup-message')});
@@ -16,9 +20,13 @@ module.exports = function (app, passport) {
   // Loads page for editing mentee account
   // Redirects to login page if user is not logged in
   app.get('/edit/mentee', isMentee, function(req, res){
+    console.log("heeere")
+    var userData = helpers.setMentorOrMentee(req);
+    console.log("ussss", userData)
     Mentee.findMentee({_id: req.user.mentee})
     .then(function(mentee){
-      res.render('edit_mentee', mentee.toJSON());
+      console.log("sommeeee")
+      res.render('edit_mentee', extend(userData, mentee.toJSON()));
     });
   });
 
@@ -43,4 +51,5 @@ module.exports = function (app, passport) {
       res.redirect('/login');
     }
   }
+
 };

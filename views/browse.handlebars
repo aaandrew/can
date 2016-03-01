@@ -6,23 +6,25 @@
 </center>
 </br>
 <section>
-  {{#each browse}}<a href="{{link}}">
+  {{#each browse}}
   <div class="browse-college-item">
-    <div class="browse-college-img">
-      <img src="{{image}}" />
-    </div>
-    <div class="browse-college-info">
-      <span class="browse-college-name">{{name}}</span><br/>
-      <span class="browse-college-location">{{location}}</span><br/>
-      <section class="browse-college-text">
-        <div class="glyphicon glyphicon-th"></div>
-        <span>{{representatives}} representatives</span><br/>
-        <div class="glyphicon glyphicon-th"></div>
-        <span>{{population}}</span><br/>
-        <div class="glyphicon glyphicon-th"></div>
-        <span>{{acceptance}}</span>
-      </section></a>
-    </div>
+    <a class="card-anchor" href="{{link}}">
+      <div class="browse-college-img">
+        <img src="{{image}}" />
+      </div>
+      <div class="browse-college-info">
+        <span class="browse-college-name">{{name}}</span><br/>
+        <span class="browse-college-location">{{location}}</span><br/>
+        <section class="browse-college-text">
+          <div class="glyphicon glyphicon-th"></div>
+          <span>{{representatives}} representatives</span><br/>
+          <div class="glyphicon glyphicon-th"></div>
+          <span>{{population}}</span><br/>
+          <div class="glyphicon glyphicon-th"></div>
+          <span>{{acceptance}}</span>
+        </section>
+      </div>
+    </a>
   </div>
   {{/each}}
 </section>

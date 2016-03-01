@@ -7,9 +7,11 @@
 <section>
   {{#each appointments}}
   <div class="appointment-item">
-    <div class="appointment-img">
-      <img src="{{image}}" />
-    </div>
+    <a href="{{link}}">
+      <div class="appointment-img">
+        <img src="{{image}}" />
+      </div>
+    </a>
     <div class="appointment-info">
       <span class="appointment-student-name"><a href="{{link}}">{{name}}</a></span><br/>
       <span class="appointment-student-college">{{college}}</span><br/>

@@ -1,5 +1,10 @@
 var Mentor = require('../models/mentor');
 
+var helpers = require('./helpers');
+
+// Function used to merge json objects
+var extend = require('util')._extend;
+
 module.exports = function (app, passport) {
 
   // Loads page for creating a new mentor account
@@ -18,9 +23,10 @@ module.exports = function (app, passport) {
   // Loads page for editing mentor account
   // Redirects to login page if user is not logged in
   app.get('/edit/mentor', isMentor, function(req, res){
+    var userData = helpers.setMentorOrMentee(req);
     Mentor.findMentor({_id: req.user.mentor})
     .then(function(mentor){
-      res.render('edit_mentor', mentor.toJSON());
+      res.render('edit_mentor', extend(userData, mentor.toJSON()));
     });
   });
 

@@ -122,7 +122,7 @@ module.exports = function (app, passport) {
 		});
 	});
 
-	function isLoggedIn(req, res, next) {
+  function isLoggedIn(req, res, next) {
     if (req.user) {
       next();
     } else {
@@ -131,10 +131,10 @@ module.exports = function (app, passport) {
   }
 
   function setMentorOrMentee(req){
-		var data = {};
-		if(req.user && req.user.mentor) data.mentor = true;
-		else if(req.user && req.user.mentee) data.mentee = true;
-		return data;
+    var data = {};
+    if(req.user && req.user.mentor) data.mentor = true;
+    else if(req.user && req.user.mentee) data.mentee = true;
+    return data;
   }
 
 };

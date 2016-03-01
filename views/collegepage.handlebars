@@ -33,32 +33,34 @@
 
   <section>
     {{#each mentors}}
-    <div class="appointment-item">
-      <div class="appointment-img">
-        <img src="{{image}}" />
+    <a class="card-anchor" href="studentpage?mentor={{_id}}">
+      <div class="appointment-item">
+        <div class="appointment-img">
+          <img src="{{image}}" />
+        </div>
+        <div class="appointment-info">
+          <span class="appointment-student-name">{{name}}</span><br/>
+          <span class="appointment-student-college">{{../college_name}}</span><br/>
+          <section class="appointment-text">
+            <div class="glyphicon glyphicon-th"></div>
+            <span>
+              <strong>Class</strong>
+              <span>{{year}}</span>
+            </span><br/>
+            <div class="glyphicon glyphicon-th"></div>
+            <span>
+              <strong>Major</strong>
+              <span>{{major}}</span>
+            </span><br/>
+            <div class="glyphicon glyphicon-th"></div>
+            <span>
+              <strong>Appointments</strong>
+              <span>{{appointments}} completed</span>
+              </span>
+          </section>
+        </div>
       </div>
-      <div class="appointment-info">
-        <span class="appointment-student-name"><a href="studentpage?mentor={{_id}}">{{name}}</a></span><br/>
-        <span class="appointment-student-college">{{../college_name}}</span><br/>
-        <section class="appointment-text">
-          <div class="glyphicon glyphicon-th"></div>
-          <span>
-            <strong>Class</strong>
-            <span>{{year}}</span>
-          </span><br/>
-          <div class="glyphicon glyphicon-th"></div>
-          <span>
-            <strong>Major</strong>
-            <span>{{major}}</span>
-          </span><br/>
-          <div class="glyphicon glyphicon-th"></div>
-          <span>
-            <strong>Appointments</strong>
-            <span>{{appointments}} completed</span>
-            </span>
-        </section>
-      </div>
-    </div>
+    </a>
     {{/each}}
   </section>
 </div>
