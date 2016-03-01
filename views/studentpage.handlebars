@@ -17,28 +17,28 @@
   <section class="studentpage-bio">
     <div><b>Background</b></div>
     {{#if background}}
-    <p>{{background}}</p>
+    <p class="studentpage-background-p">{{background}}</p>
     {{else}}
-    <p>Hi I’m Jesse! I’m a graduate student majoring in computer science at UCSD. I am currently a teaching assistant for an HCI course.</p>
+    <p class="studentpage-background-p">Hi I’m Jesse! I’m a graduate student majoring in computer science at UCSD. I am currently a teaching assistant for an HCI course.</p>
     {{/if}}
 
     <div><b>How I can help</b></div>
     {{#if help}}
-    <p>{{help}}</p>
+    <p class="studentpage-background-p">{{help}}</p>
     {{else}}
-    <p>I am friends with many people from different majors and backgrounds. I can share some really cool stories from them, or I can share my own insights that I’ve learned from my four years at UCSD.</p>
+    <p class="studentpage-background-p">I am friends with many people from different majors and backgrounds. I can share some really cool stories from them, or I can share my own insights that I’ve learned from my four years at UCSD.</p>
     {{/if}}
 
     <div><b>Interests</b></div>
     {{#if interests}}
-    <p>{{interests}}</p>
+    <p class="studentpage-background-p">{{interests}}</p>
     {{else}}
-    <p>I enjoy running biking and running 5k’s. On my spare time, I usually go eat hot pot!</p>
+    <p class="studentpage-background-p">I enjoy running biking and running 5k’s. On my spare time, I usually go eat hot pot!</p>
     {{/if}}
   </section>
   <div class="studentpage-divider"></div>
   <section class="studentpage-question-container">
-    <div>What are you interested in learning from Jesse?</div>
+    <div>What are you interested in learning from {{name}}?</div>
     <textarea></textarea>
   </section>
   <section class="studentpage-appointment-container">

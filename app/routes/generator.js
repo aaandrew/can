@@ -11,7 +11,7 @@ exports.generateImage = function () {
 };
 
 // Hardcoded function to generate college names
-exports.getCollegeName = function(shortname){
+exports.getCollegeName = function(shortname) {
   if(shortname == 'ucsd'){
     return 'UC San Diego';
   }else if(shortname == 'stanford'){
@@ -21,3 +21,8 @@ exports.getCollegeName = function(shortname){
   }
   return 'UC San Diego';
 };
+
+// Generates a randome number between 0 and the limit
+exports.generateAppointments = function(limit) {
+  return Math.floor(Math.random() * limit);
+}

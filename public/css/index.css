@@ -675,10 +675,18 @@ div.glyphicon {
 
 .studentpage-bio b {
   font-size: 18px;
+  font-weight: 500;
 }
 
 .studentpage-bio > div {
   margin-top: 20px;
+  margin-bottom: 6px;
+}
+
+p.studentpage-background-p {
+  line-height: 1.8;
+  font-weight: 300;
+  text-align: justify;
 }
 
 div.studentpage-divider {

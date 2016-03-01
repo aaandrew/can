@@ -59,7 +59,7 @@ module.exports = function (app, passport) {
 		// Get collegepage info from data
 		var college = collegepageData[req.query.name];
 		// Get mentors
-		college.mentors = data.ucsdstudents2;
+		college.mentors = [];
 
 		Mentor.find({college: req.query.name}, function(err, mentors){
 			if(err){
@@ -68,7 +68,7 @@ module.exports = function (app, passport) {
 			}else{
 				college.mentors = college.mentors.concat(mentors);
 				// Set college name
-				college.college_name = generator.getCollegeName(college.mentors[0].college);
+				college.college_name = generator.getCollegeName(req.query.name);
 				res.render('collegepage', extend(userData, college));
 			}
 		});

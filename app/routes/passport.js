@@ -79,6 +79,7 @@ module.exports = function(passport) {
             // Save mentor
             var mentor =  new Mentor(userData);
             mentor.image = generator.generateImage();
+            mentor.appointments = generator.generateAppointments(10);
             mentor.save(function(err){
               if(err) console.error("Error saving mentor", err);
             });
