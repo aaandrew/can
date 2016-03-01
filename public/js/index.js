@@ -74,14 +74,16 @@ $(document).ready(function(){
 
 
 
-  $('.home-start-button rounded-button').click(function(){
+  $('.click-record').click(function(){
     	// your code here
     	ga("send", "event", "createaccount", "click");
+      console.log('hi');
     });
 
   $('#login-account-link').click(function(){
       	// your code here
       	ga("send", "event", "createaccount2", "click");
+        console.log('no');
       });
 
 
