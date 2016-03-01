@@ -73,9 +73,14 @@ $(document).ready(function(){
   });
 
 
-  function initializePage() {
+$('.home-start-button rounded-button').click(function(){{
   	// your code here
-  	ga("send", "event", "account", "click");
+  	ga("send", "event", "createaccount", "click");
   }
+
+$('#login-account-link').click(function(){{
+    	// your code here
+    	ga("send", "event", "createaccount", "click");
+    }
 
 });
