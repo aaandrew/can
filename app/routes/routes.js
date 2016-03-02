@@ -109,7 +109,10 @@ module.exports = function (app, passport) {
 			.then(function(appointments){
 				var apts = { appointments: mapMentorAppointments(appointments) };
 				res.render('dashboard', extend(data, apts));
-			});
+			}).catch(function(err){
+				console.log("Error finding appointments", err);
+				res.end();
+			})
 		}else if(req.user && req.user.mentee){
 			// Load appointments for mentees
 			Appointment.findAppointments({mentee: req.user.mentee})

@@ -29,6 +29,7 @@ header{
   margin-top: 10px;
   margin-left: 20px;
   font-size: 20px;
+  font-family: 'Courgette', cursive;
 }
 
 .site-title > a {
@@ -260,6 +261,11 @@ nav ul{
   margin-bottom: 8px;
 }
 
+.home-guide-name.home-guide-site-name {
+  font-family: 'Courgette', cursive;
+  font-size: 17px;
+}
+
 .home-guide-desc {
   font-size: 12px;
   color: #818181;
@@ -362,6 +368,10 @@ nav ul{
 
 .browse-college-text > span {
   margin-left: 2px;
+}
+
+.icon-text {
+  margin-top: 9px;
 }
 
 a.card-anchor, a.card-anchor:hover {

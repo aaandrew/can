@@ -34,14 +34,17 @@ module.exports = function(passport) {
     process.nextTick(function() {
       User.findOne({ 'email' :  email }, function(err, user) {
         console.log("USER", user);
-        if (err) 
+        if (err){
+          console.log("Error logging in:", err);
           return done(err);
+        }
         if (!user)
           return done(null, false, req.flash('login-message', 'Incorrect username or password'));
-        if (!user.validPassword(password))
+        if (!user.validPassword(password)){
           return done(null, false, req.flash('login-message', 'Incorrect username or password'));
-        else
+        }else{
           return done(null, user);
+        }
       });
     });
 
