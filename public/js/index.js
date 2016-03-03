@@ -31,7 +31,7 @@ $(document).ready(function(){
   // Scroll to div on homepage
   $('#home-tour').click(function(){
     // Subtract the navbarheight to scroll down properly
-    var navbarOffset = 70;
+    var navbarOffset = 50;
     $('html, body').animate({
       scrollTop: $( $(this).attr('href') ).offset().top - navbarOffset
     }, 500);
