@@ -223,7 +223,7 @@ module.exports = function (app, passport) {
 			var apt = {};
 			// Set date
 			var dateString = moment(appointments[i].date + "/" + curYear, "MM-DD-YYYY");
-			apt.day = moment(dateString).format("dddd, MMMM Do YYYY");
+			apt.day = moment(dateString).format("MMMM Do, YYYY");
 			apt.time = appointments[i].time;
 			apt.name = appointments[i].mentor.name;
 			apt.college = generator.getCollegeName(appointments[i].mentor.college);
