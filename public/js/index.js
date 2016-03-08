@@ -58,17 +58,17 @@ $(document).ready(function(){
   var $studentPageSelect = $('.studentpage-apt-select');
   var $studentPageRadioButtons = $('input[name=radios]');
   // Set the default value for the confirmation text
-  $confirmationText.text($studentPageSelect.val() + " from " + $studentPageRadioButtons.val());
+  $confirmationText.text(formatConfirmationDate($studentPageSelect.val()) + " from " + $studentPageRadioButtons.val());
 
   // Listener to change confirmation time text from radio buttons
   $studentPageRadioButtons.change(function(){
-    var newConfirmTime =  $studentPageSelect.val() + " from " + $(this).val();
+    var newConfirmTime = formatConfirmationDate($studentPageSelect.val()) + " from " + $(this).val();
     $confirmationText.text(newConfirmTime);
   });
 
   // Listener to change confirmation time text from select
   $studentPageSelect.change(function(){
-    var newConfirmTime =  $(this).val() + " from " + $('input[name=radios]:checked').val();
+    var newConfirmTime =  formatConfirmationDate($(this).val()) + " from " + $('input[name=radios]:checked').val();
     $confirmationText.text(newConfirmTime);
   });
 
@@ -92,3 +92,9 @@ $(document).ready(function(){
           });
 
 });
+
+function formatConfirmationDate(text) {
+  if(!text) return;
+  var splitted = text.split("/");
+  return (Number(splitted[0])+1) + "/" + splitted[1];
+}

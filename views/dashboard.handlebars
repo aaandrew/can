@@ -43,7 +43,9 @@
   <div class="flex-message">
     <img src="https://i.imgur.com/wOG4eRL.png" />
     <div class="no-apts-message">Looks like there are no appointments :(</div>
+    {{#if mentee}}
     <a class="no-apts-message" href="/browse">Let's find a mentor!</a>
+    {{/if}}
   </div>
   {{/if}}
 
